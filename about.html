@@ -47,59 +47,66 @@
     </div>
   </div>
 
-  <!-- MAIN NAVIGATION (DPS MULTI-PAGE BAR) -->
-  <header class="sticky top-0 z-50 bg-white border-b border-slate-200 shadow-xs">
+  <!-- ==================== 2. MAIN NAVBAR & MULTI-PAGE MENU (SINGLE-LINE DESKTOP) ==================== -->
+  <header class="sticky top-0 z-50 bg-white border-b-[3px] border-[#0A1E42] shadow-xs transition duration-300">
     <div class="site-container">
-      <div class="flex items-center justify-between h-[84px]">
-        <a href="index.html" class="flex items-center gap-3.5 group">
-          <img src="images/school-logo.png" alt="Crest" class="w-12 h-12 object-contain" />
-          <div>
-            <span class="block font-black text-lg sm:text-xl tracking-tight text-[#0A1E42] leading-none">ST. MOTHER TERESA</span>
-            <span class="block font-extrabold text-[10px] tracking-[0.2em] text-[#F97316] uppercase mt-1">INTERNATIONAL SCHOOL</span>
+      <div class="flex items-center justify-between h-[84px] gap-4 lg:gap-6">
+        
+        <!-- School Crest & Brand Area (LEFT) -->
+        <a href="index.html" class="flex items-center gap-3.5 group flex-shrink-0">
+          <div class="w-12 h-12 rounded-full bg-white border border-[#0A1E42]/20 p-1 flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition duration-200 shadow-xs">
+            <img src="images/school-logo.png" alt="St. Mother Teresa International School Crest" class="w-full h-full object-contain" />
+          </div>
+          <div class="flex flex-col">
+            <span class="block font-black text-[15.5px] sm:text-[17px] tracking-tight text-[#0A1E42] leading-[1.08]">ST. MOTHER<br/>TERESA</span>
+            <span class="block font-extrabold text-[9px] sm:text-[9.5px] tracking-[0.22em] text-[#E86A1D] uppercase mt-0.5">INTERNATIONAL SCHOOL</span>
           </div>
         </a>
 
-        <!-- Desktop Nav -->
-        <nav class="hidden xl:flex items-center gap-7 text-[13.5px] font-bold text-[#0A1E42]">
-          <a href="index.html" class="hover:text-[#0A1E42] transition">HOME</a>
-          
-          <div class="relative nav-item py-6">
-            <a href="about.html" class="text-[#0A1E42] border-b-2 border-[#0D9488] pb-1 flex items-center gap-1">
-              ABOUT US <i class="fa-solid fa-chevron-down text-[9px]"></i>
-            </a>
-            <div class="nav-dropdown absolute top-full left-0 w-56 bg-white border border-slate-100 shadow-xl rounded-b-xl py-2 z-50">
-              <a href="about.html#profile" class="block px-4 py-2 hover:bg-[#E2E8F0] hover:text-[#0A1E42] text-xs">School Profile</a>
-              <a href="about.html#vision" class="block px-4 py-2 hover:bg-[#E2E8F0] hover:text-[#0A1E42] text-xs">Vision & Mission</a>
-              <a href="about.html#philosophy" class="block px-4 py-2 hover:bg-[#E2E8F0] hover:text-[#0A1E42] text-xs">Philosophy & Motto</a>
-              <a href="principal.html" class="block px-4 py-2 hover:bg-[#E2E8F0] hover:text-[#0A1E42] text-xs">Our Principal</a>
-            </div>
-          </div>
-
-          <a href="principal.html" class="hover:text-[#0A1E42] transition">PRINCIPAL'S DESK</a>
-          <a href="academics.html" class="hover:text-[#0A1E42] transition">ACADEMICS & TIMINGS</a>
-          <a href="facilities.html" class="hover:text-[#0A1E42] transition">CAMPUS FACILITIES</a>
-          <a href="carrier.html" class="hover:text-[#0A1E42] transition">CAREERS & ADMISSIONS</a>
-          
+        <!-- Desktop Navigation Items (RIGHT - 100% SINGLE LINE HORIZONTAL) -->
+        <nav class="hidden lg:flex items-center gap-4 xl:gap-6 2xl:gap-7 text-[13px] xl:text-[14px] font-bold text-[#0A1E42] whitespace-nowrap flex-shrink-0">
+          <a href="index.html" class="relative py-2 text-[#0A1E42] font-bold hover:text-[#0D9488] whitespace-nowrap transition group flex-shrink-0">
+            <span>HOME</span>
+            <span class="absolute -bottom-1 left-0 w-0 h-[3px] bg-[#0D9488] rounded-full transition-all duration-200 group-hover:w-full"></span>
+          </a>
+          <a href="about.html" class="relative py-2 text-[#0A1E42] font-black whitespace-nowrap transition group flex-shrink-0">
+            <span>ABOUT US</span>
+            <span class="absolute -bottom-1 left-0 w-full h-[3px] bg-[#0D9488] rounded-full"></span>
+          </a>
+          <a href="principal.html" class="relative py-2 text-[#0A1E42] font-bold hover:text-[#0D9488] whitespace-nowrap transition group flex-shrink-0">
+            <span>PRINCIPAL'S DESK</span>
+            <span class="absolute -bottom-1 left-0 w-0 h-[3px] bg-[#0D9488] rounded-full transition-all duration-200 group-hover:w-full"></span>
+          </a>
+          <a href="academics.html" class="relative py-2 text-[#0A1E42] font-bold hover:text-[#0D9488] whitespace-nowrap transition group flex-shrink-0">
+            <span>ACADEMICS & TIMINGS</span>
+            <span class="absolute -bottom-1 left-0 w-0 h-[3px] bg-[#0D9488] rounded-full transition-all duration-200 group-hover:w-full"></span>
+          </a>
+          <a href="facilities.html" class="relative py-2 text-[#0A1E42] font-bold hover:text-[#0D9488] whitespace-nowrap transition group flex-shrink-0">
+            <span>CAMPUS & FACILITIES</span>
+            <span class="absolute -bottom-1 left-0 w-0 h-[3px] bg-[#0D9488] rounded-full transition-all duration-200 group-hover:w-full"></span>
+          </a>
+          <a href="carrier.html" class="relative py-2 text-[#0A1E42] font-bold hover:text-[#0D9488] whitespace-nowrap transition group flex-shrink-0">
+            <span>CAREERS & ADMISSIONS</span>
+            <span class="absolute -bottom-1 left-0 w-0 h-[3px] bg-[#0D9488] rounded-full transition-all duration-200 group-hover:w-full"></span>
+          </a>
         </nav>
 
-        
-
-        <!-- Mobile Menu Button -->
-        <button id="mobileMenuBtn" class="xl:hidden p-2 text-slate-700">
-          <i class="fa-solid fa-bars text-xl"></i>
+        <!-- Mobile Menu Toggle -->
+        <button id="mobileMenuBtn" class="lg:hidden p-2 text-slate-700">
+          <i class="fa-solid fa-bars text-xl" id="menuIcon"></i>
         </button>
+
       </div>
     </div>
 
-    <!-- Mobile Drawer -->
-    <div id="mobileDrawer" class="hidden xl:hidden bg-white border-t border-slate-200 px-6 py-4 space-y-3 font-bold text-sm shadow-xl">
-      <a href="index.html" class="block py-1.5 text-[#0A1E42]">HOME</a>
-      <a href="about.html" class="block py-1.5 text-[#0A1E42] font-black">ABOUT US</a>
-      <a href="principal.html" class="block py-1.5 text-[#0A1E42]">PRINCIPAL'S DESK</a>
-      <a href="academics.html" class="block py-1.5 text-[#0A1E42]">ACADEMICS & TIMINGS</a>
-      <a href="facilities.html" class="block py-1.5 text-[#0A1E42]">CAMPUS FACILITIES</a>
-      <a href="carrier.html" class="hover:text-[#0A1E42] transition">CAREERS & ADMISSIONS</a>
-      
+    <!-- Mobile Drawer Navigation -->
+    <div id="mobileDrawer" class="hidden lg:hidden bg-white border-t border-slate-200 px-6 py-4 space-y-2 font-bold text-sm shadow-xl">
+      <a href="index.html" class="block py-2 text-[#0A1E42] hover:text-[#0D9488] border-b border-slate-100">HOME</a>
+      <a href="about.html" class="block py-2 text-[#0D9488] font-black border-b border-slate-100">ABOUT US</a>
+      <a href="principal.html" class="block py-2 text-[#0A1E42] hover:text-[#0D9488] border-b border-slate-100">PRINCIPAL'S DESK</a>
+      <a href="academics.html" class="block py-2 text-[#0A1E42] hover:text-[#0D9488] border-b border-slate-100">ACADEMICS & TIMINGS</a>
+      <a href="facilities.html" class="block py-2 text-[#0A1E42] hover:text-[#0D9488] border-b border-slate-100">CAMPUS & FACILITIES</a>
+      <a href="carrier.html" class="block py-2 text-[#0A1E42] hover:text-[#0D9488]">CAREERS & ADMISSIONS</a>
     </div>
   </header>
 
