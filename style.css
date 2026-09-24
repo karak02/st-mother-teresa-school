@@ -1,18 +1,19 @@
 /* Shared CSS for St. Mother Teresa International School */
-/* Color System: Brandeis Blue, Oxford Royal Navy (#0A1E42), Yellow (#F5A623), Maroon (#8B1E2B), Orange (#F97316) & Pure White */
+/* Color System: Blue-Teal Gradient, Oxford Navy (#0A1E42), Yellow (#F5A623), Maroon (#8B1E2B), Orange (#F97316) & Pure White */
 
 :root {
-  --color-blue: #0064FA;            /* Brandeis Royal Blue */
-  --color-blue-hover: #004EC4;
-  --color-green: #0A1E42;           /* Oxford Royal Navy */
-  --color-green-dark: #06132B;      /* Midnight Forest */
-  --color-yellow: #F5A623;          /* Academic Yellow / Gold */
+  --color-navy: #0A1E42;            /* Oxford Deep Royal Navy */
+  --color-navy-dark: #06132B;       /* Midnight Dark */
+  --color-yellow: #F5A623;          /* Academic Yellow */
   --color-maroon: #8B1E2B;          /* Collegiate Maroon */
   --color-orange: #F97316;          /* Vibrant Orange */
-  --color-orange-dark: #EA580C;     /* Deep Orange */
+  --color-teal: #0D9488;            /* Deep Teal */
+  --color-blue: #0A58CA;            /* Deep Royal Blue */
   --color-white: #FFFFFF;
   --color-surface: #F8FAFC;
   --color-border: #E2E8F0;
+  --gradient-blue-teal: linear-gradient(135deg, #0A58CA 0%, #0284C7 50%, #0D9488 100%);
+  --gradient-blue-teal-hover: linear-gradient(135deg, #084298 0%, #0369A1 50%, #0B7264 100%);
 }
 
 html, body {
@@ -29,6 +30,29 @@ body {
 
 h1, h2, h3, h4, h5, h6, nav, button, .font-heading {
   font-family: 'Inter', sans-serif;
+}
+
+/* ==================== GRADIENT BLUE & TEAL UTILITIES ==================== */
+.btn-gradient-blue-teal {
+  background: linear-gradient(135deg, #0A58CA 0%, #0284C7 50%, #0D9488 100%);
+  color: #FFFFFF;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-gradient-blue-teal:hover {
+  background: linear-gradient(135deg, #084298 0%, #0369A1 50%, #0B7264 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px -6px rgba(13, 148, 136, 0.35);
+}
+
+.gradient-text-blue-teal {
+  background: linear-gradient(135deg, #0A58CA 0%, #0284C7 50%, #0D9488 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-border-blue-teal {
+  border-image: linear-gradient(135deg, #0A58CA 0%, #0284C7 50%, #0D9488 100%) 1;
 }
 
 /* ==================== GLOBAL CENTERED MARGIN CONTAINER ==================== */
@@ -172,7 +196,7 @@ h1, h2, h3, h4, h5, h6, nav, button, .font-heading {
 }
 .quick-link-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 20px 35px -10px rgba(0, 100, 250, 0.25);
+  box-shadow: 0 20px 35px -10px rgba(13, 148, 136, 0.25);
 }
 
 /* Ticker marquee animation */
