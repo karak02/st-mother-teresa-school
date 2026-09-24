@@ -1,12 +1,12 @@
 ---
 version: alpha
 name: St. Mother Teresa International School
-description: Dynamic Academic Prestige — Brandeis Blue, Zucchini Green, Academic Yellow (#F5A623), Collegiate Maroon (#8B1E2B) & Vibrant Orange (#F97316).
+description: Dynamic Academic Prestige — Brandeis Blue, Oxford Royal Navy (#0A1E42), Academic Yellow (#F5A623), Collegiate Maroon (#8B1E2B) & Vibrant Orange (#F97316).
 colors:
   primary-blue: "#0064FA"
   primary-blue-hover: "#004EC4"
-  zucchini-green: "#0F4B2D"
-  zucchini-dark: "#082E1B"
+  zucchini-green: "#0A1E42"
+  zucchini-dark: "#06132B"
   accent-yellow: "#F5A623"
   accent-maroon: "#8B1E2B"
   accent-orange: "#F97316"
@@ -80,7 +80,7 @@ A prestigious institutional design system combining the authority of **Zucchini 
 4. **Brandeis Blue (`#0064FA` / `rgb(0, 100, 250)`):**
    - *Role:* Primary CTAs, active highlights, button hovers, and focal links.
 
-5. **Zucchini Green (`#0F4B2D` / `rgb(15, 75, 45)`):**
+5. **Oxford Royal Navy (#0A1E42) (`#0A1E42` / `rgb(15, 75, 45)`):**
    - *Role:* Top utility bar, hero background overlays, impact counters strip, and footer.
 
 6. **Pure White (`#FFFFFF`) & Warm Ivory (`#FEF9E8`):**
