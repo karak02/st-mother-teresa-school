@@ -59,48 +59,33 @@
   </div>
 
   <!-- ==================== 2. MAIN NAVBAR & MULTI-PAGE MENU ==================== -->
-  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-xs transition duration-300">
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-xs transition duration-300">
     <div class="site-container">
-      <div class="flex items-center justify-between h-[88px] gap-6">
+      <div class="flex items-center justify-between h-[72px] gap-4">
         
         <!-- School Crest & Brand -->
-        <a href="index.html" class="flex items-center gap-3.5 group flex-shrink-0">
-          <div class="w-14 h-14 rounded-full bg-white border border-[#0A1E42]/20 p-1 flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition duration-200 shadow-xs">
-            <img src="images/school-logo.png" alt="St. Mother Teresa International School Crest" class="w-full h-full object-contain" />
+        <a href="index.html" class="flex items-center gap-3 group flex-shrink-0">
+          <div class="w-11 h-11 rounded-full bg-white border border-[#0A1E42]/20 p-1 flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition duration-200 shadow-xs">
+            <img src="images/school-logo.png" alt="Crest" class="w-full h-full object-contain" />
           </div>
-          <div>
-            <span class="block font-black text-lg sm:text-xl tracking-tight text-[#0A1E42] leading-none">ST. MOTHER TERESA</span>
-            <span class="block font-extrabold text-[10px] tracking-[0.2em] text-[#F97316] uppercase mt-1">INTERNATIONAL SCHOOL</span>
+          <div class="flex flex-col">
+            <span class="block font-black text-[15px] sm:text-[16px] tracking-tight text-[#0A1E42] leading-none">ST. MOTHER TERESA</span>
+            <span class="block font-extrabold text-[9px] tracking-[0.18em] text-[#F97316] uppercase mt-1">INTERNATIONAL SCHOOL</span>
           </div>
         </a>
 
-        <!-- Desktop Mega Nav -->
-        <nav class="hidden xl:flex items-center gap-7 text-[13.5px] font-bold text-[#0A1E42] whitespace-nowrap">
-          <a href="index.html" class="text-[#0A1E42] border-b-2 border-[#0D9488] pb-1">HOME</a>
-          
-          <!-- Dropdown: About Us -->
-          <div class="relative nav-item py-6">
-            <a href="about.html" class="hover:text-[#0A1E42] transition flex items-center gap-1.5">
-              ABOUT US <i class="fa-solid fa-chevron-down text-[9px] text-slate-400"></i>
-            </a>
-            <div class="nav-dropdown absolute top-full left-0 w-60 bg-white border border-slate-100 shadow-2xl rounded-b-xl py-2 z-50">
-              <a href="#about-doc" class="block px-5 py-2.5 hover:bg-[#E2E8F0] hover:text-[#0A1E42] text-xs font-semibold">School Profile & Vision</a>
-              <a href="about.html#profile" class="block px-5 py-2.5 hover:bg-[#E2E8F0] hover:text-[#0A1E42] text-xs font-semibold">About Us Page</a>
-              <a href="principal.html" class="block px-5 py-2.5 hover:bg-[#E2E8F0] hover:text-[#0A1E42] text-xs font-semibold">Principal's Desk</a>
-            </div>
-          </div>
-
-          <a href="principal.html" class="hover:text-[#0A1E42] transition">PRINCIPAL'S DESK</a>
-          <a href="academics.html" class="hover:text-[#0A1E42] transition">ACADEMICS & TIMINGS</a>
-          <a href="facilities.html" class="hover:text-[#0A1E42] transition">CAMPUS FACILITIES</a>
-          <a href="carrier.html" class="hover:text-[#0A1E42] transition">CAREERS & ADMISSIONS</a>
+        <!-- Desktop Single-Line Navigation -->
+        <nav class="hidden lg:flex items-center gap-4 xl:gap-6 text-[12px] xl:text-[13px] font-bold text-[#0A1E42] whitespace-nowrap flex-shrink-0">
+          <a href="index.html" class="text-[#0A1E42] border-b-2 border-[#0D9488] pb-0.5">HOME</a>
+          <a href="about.html" class="hover:text-[#0D9488] transition">ABOUT US</a>
+          <a href="principal.html" class="hover:text-[#0D9488] transition">PRINCIPAL'S DESK</a>
+          <a href="academics.html" class="hover:text-[#0D9488] transition">ACADEMICS & TIMINGS</a>
+          <a href="facilities.html" class="hover:text-[#0D9488] transition">CAMPUS FACILITIES</a>
+          <a href="carrier.html" class="hover:text-[#0D9488] transition">CAREERS & ADMISSIONS</a>
         </nav>
 
-        <!-- CTA & Phone Button -->
-        
-
         <!-- Mobile Menu Toggle -->
-        <button id="mobileMenuBtn" class="xl:hidden p-2 text-slate-700">
+        <button id="mobileMenuBtn" class="lg:hidden p-2 text-slate-700">
           <i class="fa-solid fa-bars text-xl" id="menuIcon"></i>
         </button>
 
@@ -191,7 +176,7 @@
 
         <!-- Main Impact Headline -->
         <div class="space-y-3 max-w-4xl mx-auto">
-          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.15] drop-shadow-md">
+          <h1 class="text-2xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white leading-[1.15] drop-shadow-md">
             “Educating Minds, <br/>
             <span class="gradient-text-blue-teal">Enriching Hearts,</span> <br class="sm:hidden"/>
             Empowering Futures.”
@@ -340,7 +325,7 @@
   </section>
 
   <!-- ==================== 5. PRINCIPAL'S MESSAGE (HIGHLIGHT ON HOMEPAGE) ==================== -->
-  <section class="py-20 lg:py-28 bg-white border-b border-slate-200">
+  <section class="py-10 lg:py-14 bg-white border-b border-slate-200">
     <div class="site-container">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         
@@ -365,14 +350,14 @@
         <div class="lg:col-span-7 space-y-6 reveal-from-right delay-200">
           <div class="space-y-2">
             <span class="text-xs font-extrabold tracking-widest text-[#0D9488] uppercase">LEADERSHIP ADDRESS</span>
-            <h2 class="text-2xl sm:text-4xl font-black text-[#0A1E42]">From the Principal's Desk</h2>
+            <h2 class="text-xl sm:text-3xl font-black text-[#0A1E42]">From the Principal's Desk</h2>
             <div class="h-1 w-12 bg-gradient-to-r from-[#0A58CA] to-[#0D9488] rounded-full"></div>
             <p class="text-xs font-bold text-[#0A1E42] uppercase tracking-wider pt-1">
               Motto: Enlighten • Enrich • Empower
             </p>
           </div>
 
-          <div class="space-y-4 text-slate-600 text-sm sm:text-base leading-relaxed text-justify">
+          <div class="space-y-4 text-slate-600 text-xs sm:text-sm leading-relaxed text-justify">
             <p class="font-bold text-[#0A1E42]">Dear Students, Parents and Well-wishers,</p>
             <p>
               At St. Mother Teresa International School, we believe that education is not merely about academic excellence, but about shaping compassionate, confident and responsible individuals who can make a positive difference in the world.
@@ -413,7 +398,7 @@
             </h2>
             <div class="h-1 w-12 bg-gradient-to-r from-[#0A58CA] to-[#0D9488] rounded-full"></div>
           </div>
-          <div class="space-y-4 text-slate-700 text-[15px] sm:text-[16px] leading-[1.75] text-justify font-normal">
+          <div class="space-y-4 text-slate-700 text-[13.5px] sm:text-[14.5px] leading-[1.65] text-justify font-normal">
             <p>
               St. Mother Teresa International School stands as a beacon of enlightened education, committed to nurturing young minds and shaping compassionate, confident and conscientious individuals. The school envisions education as a transformative journey—one that transcends the confines of textbooks and classrooms to cultivate intellectual curiosity, moral integrity, emotional resilience and a lifelong passion for learning. Inspired by the profound legacy and humanitarian ideals of St. Mother Teresa, the institution endeavours to inculcate the timeless values of compassion, humility, selflessness, perseverance and service to humanity. The school believes that true education is reflected not merely in academic accomplishments but in the character, conduct and contribution of an individual.
             </p>
@@ -442,7 +427,7 @@
             </h2>
             <div class="h-1 w-12 bg-gradient-to-r from-[#0A58CA] to-[#0D9488] rounded-full"></div>
           </div>
-          <div class="space-y-4 text-slate-700 text-[15px] sm:text-[16px] leading-[1.75] text-justify font-normal">
+          <div class="space-y-4 text-slate-700 text-[13.5px] sm:text-[14.5px] leading-[1.65] text-justify font-normal">
             <p>
               Our vision is to emerge as a distinguished centre of holistic and progressive education where every learner is empowered to discover their innate potential, pursue excellence and develop into a thoughtful global citizen. We aspire to foster an intellectually stimulating and emotionally nurturing environment where curiosity is celebrated, creativity flourishes, individuality is respected and every child is encouraged to dream beyond limitations. Our ultimate vision is to prepare learners who are knowledgeable yet humble, ambitious yet compassionate, confident yet respectful, and successful yet socially responsible.
             </p>
@@ -472,7 +457,7 @@
             </h2>
             <div class="h-1 w-12 bg-gradient-to-r from-[#0A58CA] to-[#0D9488] rounded-full"></div>
           </div>
-          <div class="space-y-4 text-slate-700 text-[15px] sm:text-[16px] leading-[1.75] text-justify font-normal">
+          <div class="space-y-4 text-slate-700 text-[13.5px] sm:text-[14.5px] leading-[1.65] text-justify font-normal">
             <p>
               Teachers are the guiding force behind every learner's educational journey. At St. Mother Teresa International School, educators strive to create classrooms that are intellectually stimulating, emotionally secure and conducive to exploration. Our teachers endeavour to move beyond the conventional role of instructors and become mentors, facilitators, motivators and role models. Through continuous professional development and reflective teaching practices, educators remain responsive to the evolving needs of learners and the changing landscape of education.
             </p>
@@ -498,7 +483,7 @@
           <span class="text-xs font-black tracking-[0.2em] text-[#0D9488] uppercase block">
             CORE INSTITUTIONAL FOUNDATION
           </span>
-          <h2 class="text-2xl sm:text-4xl font-black text-white tracking-tight">
+          <h2 class="text-xl sm:text-3xl font-black text-white tracking-tight">
             Commitment, Philosophy & Motto
           </h2>
         </div>
@@ -591,11 +576,11 @@
   </section>
 
   <!-- ==================== 7. LIVE HORIZONTAL AUTO-SCROLLING CAMPUS FACILITIES ==================== -->
-  <section id="facilities-showcase" class="py-20 lg:py-28 bg-white border-b border-slate-200 overflow-hidden reveal-on-scroll">
+  <section id="facilities-showcase" class="py-10 lg:py-14 bg-white border-b border-slate-200 overflow-hidden reveal-on-scroll">
     <div class="site-container mb-10 flex flex-col md:flex-row md:items-end justify-between gap-4">
       <div class="space-y-2">
         <span class="text-xs font-extrabold tracking-widest text-[#0D9488] uppercase">STATE-OF-THE-ART INFRASTRUCTURE</span>
-        <h2 class="text-2xl sm:text-4xl font-black text-[#0A1E42]">Campus Facilities Showcase</h2>
+        <h2 class="text-xl sm:text-3xl font-black text-[#0A1E42]">Campus Facilities Showcase</h2>
         <p class="text-slate-500 text-xs sm:text-sm">Hover over any facility to pause scrolling. Click to enlarge photo.</p>
       </div>
       <a href="facilities.html" class="inline-flex items-center gap-2 text-xs font-bold text-[#0A1E42] hover:text-[#0D9488] transition flex-shrink-0">
@@ -759,11 +744,11 @@
   </section>
 
   <!-- ==================== 8. ACADEMIC WINGS & TIMINGS ==================== -->
-  <section class="py-20 lg:py-28 bg-[#F8FAFC] border-b border-slate-200 reveal-on-scroll">
+  <section class="py-10 lg:py-14 bg-[#F8FAFC] border-b border-slate-200 reveal-on-scroll">
     <div class="site-container space-y-10">
       <div class="text-center max-w-2xl mx-auto space-y-2">
         <span class="text-xs font-extrabold tracking-widest text-[#0D9488] uppercase">ACADEMIC DIVISIONS</span>
-        <h2 class="text-2xl sm:text-4xl font-black text-[#0A1E42]">Curriculum & Daily Timings</h2>
+        <h2 class="text-xl sm:text-3xl font-black text-[#0A1E42]">Curriculum & Daily Timings</h2>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -797,7 +782,7 @@
   </section>
 
   <!-- ==================== 9. HOMEPAGE ADMISSION ENQUIRY + MAP ==================== -->
-  <section class="py-20 lg:py-28 bg-[#0A1E42] text-white reveal-on-scroll">
+  <section class="py-10 lg:py-14 bg-[#0A1E42] text-white reveal-on-scroll">
     <div class="site-container">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
         
@@ -805,7 +790,7 @@
         <div class="lg:col-span-7 space-y-6 reveal-from-right delay-200">
           <div class="space-y-2">
             <span class="text-xs font-extrabold tracking-widest text-[#0D9488] uppercase">ENROLMENT 2025–26</span>
-            <h2 class="text-2xl sm:text-4xl font-black text-white">Admission Enquiry</h2>
+            <h2 class="text-xl sm:text-3xl font-black text-white">Admission Enquiry</h2>
             <p class="text-slate-300 text-xs sm:text-sm">Submit your details and our admission desk will connect with you.</p>
           </div>
 
@@ -865,7 +850,7 @@
         <div class="lg:col-span-5 space-y-4">
           <div class="space-y-2">
             <span class="text-xs font-extrabold tracking-widest text-[#0D9488] uppercase">LOCATION</span>
-            <h2 class="text-2xl sm:text-4xl font-black text-white">Visit Our Campus</h2>
+            <h2 class="text-xl sm:text-3xl font-black text-white">Visit Our Campus</h2>
           </div>
 
           <div class="h-[340px] rounded-2xl overflow-hidden border border-white/20 shadow-xl bg-slate-900">
