@@ -1,14 +1,18 @@
 /* Shared CSS for St. Mother Teresa International School */
-/* Authentic Color System: Brandeis Blue, Jordy Blue, Light Cyan, Pastel Green & Zucchini Green */
+/* Color System: Brandeis Blue, Zucchini Green, Yellow (#F5A623), Maroon (#8B1E2B), Orange (#F97316) & Pure White */
 
 :root {
-  --color-brandeis-blue: #0064FA;   /* Vivid Royal / Electric Blue */
-  --color-jordy-blue: #91BEFF;      /* Soft Sky / Cornflower Blue */
-  --color-light-cyan: #E1F5FF;      /* Pale Icy Cyan Surface */
-  --color-pastel-green: #5AA55A;    /* Medium Sage Meadow Green */
-  --color-zucchini-green: #0F4B2D;  /* Deep Evergreen / Forest Green */
-  --color-zucchini-dark: #082E1B;   /* Midnight Deep Forest */
+  --color-blue: #0064FA;            /* Brandeis Royal Blue */
+  --color-blue-hover: #004EC4;
+  --color-green: #0F4B2D;           /* Zucchini Deep Green */
+  --color-green-dark: #082E1B;      /* Midnight Forest */
+  --color-yellow: #F5A623;          /* Academic Yellow / Gold */
+  --color-maroon: #8B1E2B;          /* Collegiate Maroon */
+  --color-orange: #F97316;          /* Vibrant Orange */
+  --color-orange-dark: #EA580C;     /* Deep Orange */
   --color-white: #FFFFFF;
+  --color-surface: #F8FAFC;
+  --color-border: #E2E8F0;
 }
 
 html, body {

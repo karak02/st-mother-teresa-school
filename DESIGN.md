@@ -1,17 +1,18 @@
 ---
 version: alpha
 name: St. Mother Teresa International School
-description: Modern Botanical & Electric Academic Palette (Brandeis Blue, Jordy Blue, Light Cyan, Pastel Green, Zucchini Green).
+description: Dynamic Academic Prestige — Brandeis Blue, Zucchini Green, Academic Yellow (#F5A623), Collegiate Maroon (#8B1E2B) & Vibrant Orange (#F97316).
 colors:
-  primary: "#0064FA"
-  primary-hover: "#004EC4"
-  jordy-blue: "#91BEFF"
-  light-cyan: "#E1F5FF"
-  pastel-green: "#5AA55A"
+  primary-blue: "#0064FA"
+  primary-blue-hover: "#004EC4"
   zucchini-green: "#0F4B2D"
   zucchini-dark: "#082E1B"
+  accent-yellow: "#F5A623"
+  accent-maroon: "#8B1E2B"
+  accent-orange: "#F97316"
   surface: "#FFFFFF"
-  border-soft: "#CBE7F5"
+  surface-warm: "#FEF9E8"
+  border-soft: "#E2E8F0"
 typography:
   font-heading: Inter, sans-serif
   font-body: Roboto, sans-serif
@@ -40,7 +41,7 @@ rounded:
   pill: "9999px"
 components:
   button-primary:
-    backgroundColor: "{colors.primary}"
+    backgroundColor: "{colors.primary-blue}"
     textColor: "{colors.surface}"
     rounded: "{rounded.pill}"
     padding: "14px 32px"
@@ -48,7 +49,11 @@ components:
     backgroundColor: "{colors.zucchini-green}"
     textColor: "{colors.surface}"
   badge-active:
-    backgroundColor: "{colors.primary}"
+    backgroundColor: "{colors.accent-yellow}"
+    textColor: "{colors.zucchini-green}"
+    rounded: "{rounded.pill}"
+  badge-accolade:
+    backgroundColor: "{colors.accent-maroon}"
     textColor: "{colors.surface}"
     rounded: "{rounded.pill}"
   card-container:
@@ -59,26 +64,26 @@ components:
 
 ## Overview
 
-A modern institutional design system derived from the curated 5-color Pinterest palette (`https://in.pinterest.com/pin/573646071307653500/`), blending deep botanical evergreen authority with vivid royal blue clarity.
+A prestigious institutional design system combining the authority of **Zucchini Forest Green** and **Brandeis Royal Blue** with high-contrast energy from **Academic Yellow (`#F5A623`)**, **Collegiate Maroon (`#8B1E2B`)**, and **Vibrant Orange (`#F97316`)**.
 
 ## Color Hierarchy
 
-1. **Brandeis Blue (`#0064FA` / `rgb(0, 100, 250)`):**
-   - *Role:* Primary brand catalyst, high-converting CTA buttons, admissions pills, active navigation indicators, key heading highlights.
+1. **Academic Yellow (`#F5A623` / `rgb(245, 166, 35)`):**
+   - *Role:* Admissions badge pills, active indicators, live announcement ticker tag, and Motto flagship card.
 
-2. **Zucchini Green (`#0F4B2D` / `rgb(15, 75, 45)`):**
-   - *Role:* Institutional foundation, top utility bar, main header, hero background overlays, impact counters strip, flagship foundation container, and footer.
+2. **Collegiate Maroon (`#8B1E2B` / `rgb(139, 30, 43)`):**
+   - *Role:* Ideal Principal Award badge, leadership accolades, and Educational Philosophy card.
 
-3. **Jordy Blue (`#91BEFF` / `rgb(145, 190, 255)`):**
-   - *Role:* Sky blue highlights, subtle glowing indicator dots, and delicate badges.
+3. **Vibrant Orange (`#F97316` / `rgb(249, 115, 22)`):**
+   - *Role:* Sub-branding `INTERNATIONAL SCHOOL` logo text, visionary tags, and discovery highlights.
 
-4. **Pastel Green (`#5AA55A` / `rgb(90, 165, 90)`):**
-   - *Role:* Fresh secondary accents, verified tags, and educational growth badges.
+4. **Brandeis Blue (`#0064FA` / `rgb(0, 100, 250)`):**
+   - *Role:* Primary CTAs, active highlights, button hovers, and focal links.
 
-5. **Light Cyan (`#E1F5FF` / `rgb(225, 245, 255)`):**
-   - *Role:* Subtle card tinting, quote callout backgrounds, and light division highlights.
+5. **Zucchini Green (`#0F4B2D` / `rgb(15, 75, 45)`):**
+   - *Role:* Top utility bar, hero background overlays, impact counters strip, and footer.
 
-6. **Pure White (`#FFFFFF`):**
+6. **Pure White (`#FFFFFF`) & Warm Ivory (`#FEF9E8`):**
    - *Role:* Clean page background, card surfaces, and crisp text on dark sections.
 
 ## Typography
