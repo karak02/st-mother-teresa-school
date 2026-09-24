@@ -1,16 +1,17 @@
 ---
 version: alpha
 name: St. Mother Teresa International School
-description: All-Blue Prestige Academic System — Oxford Navy (#0C2340), Vivid Cobalt Blue (#2563EB), Sky Blue (#38BDF8) & Pure White (#FFFFFF).
+description: Modern Botanical & Electric Academic Palette (Brandeis Blue, Jordy Blue, Light Cyan, Pastel Green, Zucchini Green).
 colors:
-  primary: "#2563EB"
-  primary-hover: "#1D4ED8"
-  oxford-navy: "#0C2340"
-  midnight-dark: "#06152B"
-  sky-accent: "#38BDF8"
+  primary: "#0064FA"
+  primary-hover: "#004EC4"
+  jordy-blue: "#91BEFF"
+  light-cyan: "#E1F5FF"
+  pastel-green: "#5AA55A"
+  zucchini-green: "#0F4B2D"
+  zucchini-dark: "#082E1B"
   surface: "#FFFFFF"
-  surface-ice: "#F0F6FF"
-  border-soft: "#D8E2EF"
+  border-soft: "#CBE7F5"
 typography:
   font-heading: Inter, sans-serif
   font-body: Roboto, sans-serif
@@ -44,7 +45,7 @@ components:
     rounded: "{rounded.pill}"
     padding: "14px 32px"
   header-bar:
-    backgroundColor: "{colors.oxford-navy}"
+    backgroundColor: "{colors.zucchini-green}"
     textColor: "{colors.surface}"
   badge-active:
     backgroundColor: "{colors.primary}"
@@ -58,23 +59,26 @@ components:
 
 ## Overview
 
-A prestigious, modern all-blue institutional design system tailored for **St. Mother Teresa International School**, combining the authoritative depth of Oxford/Cambridge Navy with energetic Cobalt Blue and luminous Sky accents.
+A modern institutional design system derived from the curated 5-color Pinterest palette (`https://in.pinterest.com/pin/573646071307653500/`), blending deep botanical evergreen authority with vivid royal blue clarity.
 
 ## Color Hierarchy
 
-1. **Vivid Cobalt Blue (`#2563EB` / `rgb(37, 99, 235)`):**
+1. **Brandeis Blue (`#0064FA` / `rgb(0, 100, 250)`):**
    - *Role:* Primary brand catalyst, high-converting CTA buttons, admissions pills, active navigation indicators, key heading highlights.
 
-2. **Oxford Deep Navy (`#0C2340` / `rgb(12, 35, 64)`):**
+2. **Zucchini Green (`#0F4B2D` / `rgb(15, 75, 45)`):**
    - *Role:* Institutional foundation, top utility bar, main header, hero background overlays, impact counters strip, flagship foundation container, and footer.
 
-3. **Sky Blue (`#38BDF8` / `rgb(56, 189, 248)`):**
-   - *Role:* Logo sub-text, delicate luminous accents, active glowing indicator dots.
+3. **Jordy Blue (`#91BEFF` / `rgb(145, 190, 255)`):**
+   - *Role:* Sky blue highlights, subtle glowing indicator dots, and delicate badges.
 
-4. **Ice Blue Surface (`#F0F6FF` / `rgb(240, 246, 255)`):**
-   - *Role:* Subtle card tinting, quote callouts, and secondary background surfaces.
+4. **Pastel Green (`#5AA55A` / `rgb(90, 165, 90)`):**
+   - *Role:* Fresh secondary accents, verified tags, and educational growth badges.
 
-5. **Pure White (`#FFFFFF`):**
+5. **Light Cyan (`#E1F5FF` / `rgb(225, 245, 255)`):**
+   - *Role:* Subtle card tinting, quote callout backgrounds, and light division highlights.
+
+6. **Pure White (`#FFFFFF`):**
    - *Role:* Clean page background, card surfaces, and crisp text on dark sections.
 
 ## Typography

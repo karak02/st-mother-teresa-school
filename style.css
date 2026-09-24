@@ -1,16 +1,14 @@
 /* Shared CSS for St. Mother Teresa International School */
-/* Full All-Blue Academic Theme (Oxford Midnight, Royal Blue, Vivid Cobalt, Sky Blue & Crisp White) */
+/* Authentic Color System: Brandeis Blue, Jordy Blue, Light Cyan, Pastel Green & Zucchini Green */
 
 :root {
-  --theme-navy: #0C2340;            /* Oxford Deep Navy Blue */
-  --theme-navy-dark: #06152B;       /* Midnight Abyss Blue */
-  --theme-royal: #1B4D89;           /* Royal Blue */
-  --theme-vivid-blue: #2563EB;      /* Vivid Cobalt Blue (Primary Accent & CTAs) */
-  --theme-sky: #38BDF8;             /* Luminous Sky / Cyan Accent */
-  --theme-white: #FFFFFF;
-  --theme-ice-blue: #F0F6FF;        /* Soft Ice Blue Surface */
-  --theme-surface-slate: #F8FAFC;   /* Crisp Surface */
-  --theme-border: #D8E2EF;
+  --color-brandeis-blue: #0064FA;   /* Vivid Royal / Electric Blue */
+  --color-jordy-blue: #91BEFF;      /* Soft Sky / Cornflower Blue */
+  --color-light-cyan: #E1F5FF;      /* Pale Icy Cyan Surface */
+  --color-pastel-green: #5AA55A;    /* Medium Sage Meadow Green */
+  --color-zucchini-green: #0F4B2D;  /* Deep Evergreen / Forest Green */
+  --color-zucchini-dark: #082E1B;   /* Midnight Deep Forest */
+  --color-white: #FFFFFF;
 }
 
 html, body {
@@ -21,7 +19,7 @@ html, body {
 
 body {
   font-family: 'Roboto', sans-serif;
-  color: #0C2340;
+  color: #0F4B2D;
   background-color: #FFFFFF;
 }
 
@@ -170,7 +168,7 @@ h1, h2, h3, h4, h5, h6, nav, button, .font-heading {
 }
 .quick-link-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 20px 35px -10px rgba(37, 99, 235, 0.25);
+  box-shadow: 0 20px 35px -10px rgba(0, 100, 250, 0.25);
 }
 
 /* Ticker marquee animation */
