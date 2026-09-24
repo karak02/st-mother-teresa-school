@@ -1,16 +1,16 @@
 ---
 version: alpha
 name: St. Mother Teresa International School
-description: Heritage Academic Synthesis — DPS Newtown (Forest Green & Gold) + Don Bosco Park Circus (Royal Navy & Crimson Gold).
+description: Authentic Heritage Synthesis — DPS Newtown Kolkata (Forest Green & Gold) + Don Bosco Park Circus (Royal Navy & Crimson Maroon).
 colors:
-  primary-gold: "#E5A918"
-  primary-navy: "#0B1B3D"
-  dps-forest: "#3399FF"
-  db-crimson: "#801423"
+  primary-gold: "#F5A623"
+  primary-navy: "#0A1E42"
+  dps-forest: "#063F3A"
+  db-crimson: "#8B1E2B"
   surface: "#FFFFFF"
-  surface-warm: "#FAF8F2"
-  surface-dark: "#071228"
-  border-soft: "#E5DFD3"
+  surface-warm: "#FAF9F6"
+  surface-dark: "#06132B"
+  border-soft: "#E2E7ED"
 typography:
   font-heading: Inter, sans-serif
   font-body: Roboto, sans-serif
@@ -62,26 +62,26 @@ components:
 
 ## Overview
 
-A prestigious institutional design system synthesizing the visual identities of **DPS Newtown Kolkata** (Heritage Forest Green & Academic Gold) and **Don Bosco Park Circus** (Collegiate Royal Navy & Crimson Laurel Accents).
+A prestigious institutional design system synthesizing the authentic visual identities of **DPS Newtown Kolkata** (Heritage Forest Green & Academic Gold) and **Don Bosco Park Circus** (Collegiate Royal Navy & Crimson Maroon).
 
-## Colors
+## Color Hierarchy
 
-1. **Academic Imperial Gold (`#E5A918` / `rgb(229, 169, 24)`):**
+1. **Academic Imperial Gold (`#F5A623` / `rgb(245, 166, 35)`):**
    - *Role:* Primary brand catalyst, high-converting CTA buttons, admissions pills, active navigation indicators, key heading highlights.
-   - *Heritage:* Shared prestigious crest and laurel color of both DPS and Don Bosco.
+   - *Heritage:* Shared prestigious crest and laurel color of both DPS Newtown and Don Bosco Park Circus.
 
-2. **Don Bosco Royal Navy (`#0B1B3D` / `rgb(11, 27, 61)`):**
+2. **Don Bosco Royal Navy (`#0A1E42` / `rgb(10, 30, 66)`):**
    - *Role:* Institutional foundation, hero background overlays, impact counters strip, flagship foundation container, main headings, and footer.
-   - *Heritage:* Core authoritative institutional anchor.
+   - *Heritage:* Core authoritative institutional anchor from Don Bosco Park Circus.
 
-3. **Vibrant Cy-Blue (#3399FF) (`#3399FF` / `rgb(4, 57, 39)`):**
+3. **DPS Heritage Forest Green (`#063F3A` / `rgb(6, 63, 58)`):**
    - *Role:* Top utility strip, educational philosophy card, sub-branding accents, and school divisions.
-   - *Heritage:* The signature green tone of DPS Newtown.
+   - *Heritage:* The signature green tone of DPS Newtown Kolkata.
 
-4. **Don Bosco Crimson Maroon (`#801423` / `rgb(128, 20, 35)`):**
+4. **Don Bosco Crimson Maroon (`#8B1E2B` / `rgb(139, 30, 43)`):**
    - *Role:* Ideal Principal Award badge, leadership accolades, and high-prestige callout tags.
 
-5. **Pure White (`#FFFFFF`) & Warm Alabaster (`#FAF8F2`):**
+5. **Pure White (`#FFFFFF`) & Warm Alabaster (`#FAF9F6`):**
    - *Role:* Clean page background, card surfaces, and crisp text on dark sections.
 
 ## Typography
