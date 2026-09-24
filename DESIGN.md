@@ -1,16 +1,16 @@
 ---
 version: alpha
 name: St. Mother Teresa International School
-description: Authentic Heritage Synthesis — DPS Newtown Kolkata (Forest Green & Gold) + Don Bosco Park Circus (Royal Navy & Crimson Maroon).
+description: All-Blue Prestige Academic System — Oxford Navy (#0C2340), Vivid Cobalt Blue (#2563EB), Sky Blue (#38BDF8) & Pure White (#FFFFFF).
 colors:
-  primary-gold: "#F5A623"
-  primary-navy: "#0A1E42"
-  dps-forest: "#063F3A"
-  db-crimson: "#8B1E2B"
+  primary: "#2563EB"
+  primary-hover: "#1D4ED8"
+  oxford-navy: "#0C2340"
+  midnight-dark: "#06152B"
+  sky-accent: "#38BDF8"
   surface: "#FFFFFF"
-  surface-warm: "#FAF9F6"
-  surface-dark: "#06132B"
-  border-soft: "#E2E7ED"
+  surface-ice: "#F0F6FF"
+  border-soft: "#D8E2EF"
 typography:
   font-heading: Inter, sans-serif
   font-body: Roboto, sans-serif
@@ -39,19 +39,15 @@ rounded:
   pill: "9999px"
 components:
   button-primary:
-    backgroundColor: "{colors.primary-gold}"
-    textColor: "{colors.primary-navy}"
+    backgroundColor: "{colors.primary}"
+    textColor: "{colors.surface}"
     rounded: "{rounded.pill}"
     padding: "14px 32px"
   header-bar:
-    backgroundColor: "{colors.dps-forest}"
+    backgroundColor: "{colors.oxford-navy}"
     textColor: "{colors.surface}"
   badge-active:
-    backgroundColor: "{colors.primary-gold}"
-    textColor: "{colors.primary-navy}"
-    rounded: "{rounded.pill}"
-  badge-accolade:
-    backgroundColor: "{colors.db-crimson}"
+    backgroundColor: "{colors.primary}"
     textColor: "{colors.surface}"
     rounded: "{rounded.pill}"
   card-container:
@@ -62,26 +58,23 @@ components:
 
 ## Overview
 
-A prestigious institutional design system synthesizing the authentic visual identities of **DPS Newtown Kolkata** (Heritage Forest Green & Academic Gold) and **Don Bosco Park Circus** (Collegiate Royal Navy & Crimson Maroon).
+A prestigious, modern all-blue institutional design system tailored for **St. Mother Teresa International School**, combining the authoritative depth of Oxford/Cambridge Navy with energetic Cobalt Blue and luminous Sky accents.
 
 ## Color Hierarchy
 
-1. **Academic Imperial Gold (`#F5A623` / `rgb(245, 166, 35)`):**
+1. **Vivid Cobalt Blue (`#2563EB` / `rgb(37, 99, 235)`):**
    - *Role:* Primary brand catalyst, high-converting CTA buttons, admissions pills, active navigation indicators, key heading highlights.
-   - *Heritage:* Shared prestigious crest and laurel color of both DPS Newtown and Don Bosco Park Circus.
 
-2. **Don Bosco Royal Navy (`#0A1E42` / `rgb(10, 30, 66)`):**
-   - *Role:* Institutional foundation, hero background overlays, impact counters strip, flagship foundation container, main headings, and footer.
-   - *Heritage:* Core authoritative institutional anchor from Don Bosco Park Circus.
+2. **Oxford Deep Navy (`#0C2340` / `rgb(12, 35, 64)`):**
+   - *Role:* Institutional foundation, top utility bar, main header, hero background overlays, impact counters strip, flagship foundation container, and footer.
 
-3. **DPS Heritage Forest Green (`#063F3A` / `rgb(6, 63, 58)`):**
-   - *Role:* Top utility strip, educational philosophy card, sub-branding accents, and school divisions.
-   - *Heritage:* The signature green tone of DPS Newtown Kolkata.
+3. **Sky Blue (`#38BDF8` / `rgb(56, 189, 248)`):**
+   - *Role:* Logo sub-text, delicate luminous accents, active glowing indicator dots.
 
-4. **Don Bosco Crimson Maroon (`#8B1E2B` / `rgb(139, 30, 43)`):**
-   - *Role:* Ideal Principal Award badge, leadership accolades, and high-prestige callout tags.
+4. **Ice Blue Surface (`#F0F6FF` / `rgb(240, 246, 255)`):**
+   - *Role:* Subtle card tinting, quote callouts, and secondary background surfaces.
 
-5. **Pure White (`#FFFFFF`) & Warm Alabaster (`#FAF9F6`):**
+5. **Pure White (`#FFFFFF`):**
    - *Role:* Clean page background, card surfaces, and crisp text on dark sections.
 
 ## Typography

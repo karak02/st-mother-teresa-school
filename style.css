@@ -1,18 +1,16 @@
 /* Shared CSS for St. Mother Teresa International School */
-/* Authentic Color System Merged from DPS Newtown Kolkata + Don Bosco Park Circus */
+/* Full All-Blue Academic Theme (Oxford Midnight, Royal Blue, Vivid Cobalt, Sky Blue & Crisp White) */
 
 :root {
-  --theme-db-navy: #0A1E42;         /* Don Bosco Royal Navy */
-  --theme-db-navy-dark: #06132B;    /* Don Bosco Deep Midnight Navy */
-  --theme-dps-green: #063F3A;       /* DPS Newtown Heritage Forest Green */
-  --theme-dps-green-dark: #032825;  /* DPS Deep Forest */
-  --theme-gold: #F5A623;            /* Shared Imperial Academic Gold */
-  --theme-gold-hover: #D99115;      /* Gold Hover */
-  --theme-db-crimson: #8B1E2B;      /* Don Bosco Collegiate Maroon */
+  --theme-navy: #0C2340;            /* Oxford Deep Navy Blue */
+  --theme-navy-dark: #06152B;       /* Midnight Abyss Blue */
+  --theme-royal: #1B4D89;           /* Royal Blue */
+  --theme-vivid-blue: #2563EB;      /* Vivid Cobalt Blue (Primary Accent & CTAs) */
+  --theme-sky: #38BDF8;             /* Luminous Sky / Cyan Accent */
   --theme-white: #FFFFFF;
-  --theme-surface-warm: #FAF9F6;
-  --theme-surface-slate: #F4F6F9;
-  --theme-border: #E2E7ED;
+  --theme-ice-blue: #F0F6FF;        /* Soft Ice Blue Surface */
+  --theme-surface-slate: #F8FAFC;   /* Crisp Surface */
+  --theme-border: #D8E2EF;
 }
 
 html, body {
@@ -23,7 +21,7 @@ html, body {
 
 body {
   font-family: 'Roboto', sans-serif;
-  color: #0A1E42;
+  color: #0C2340;
   background-color: #FFFFFF;
 }
 
@@ -172,7 +170,7 @@ h1, h2, h3, h4, h5, h6, nav, button, .font-heading {
 }
 .quick-link-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 20px 35px -10px rgba(10, 30, 66, 0.25);
+  box-shadow: 0 20px 35px -10px rgba(37, 99, 235, 0.25);
 }
 
 /* Ticker marquee animation */
