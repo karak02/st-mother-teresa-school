@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Academics & Timings | St. Mother Teresa International School</title>
+  <meta name="description" content="Academic wings, daily class schedules and faculty mentorship at St. Mother Teresa International School." />
+  <link rel="icon" type="image/png" href="images/school-logo.png" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400&display=swap" rel="stylesheet">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-white text-slate-800 antialiased selection:bg-[#E5A918] selection:text-[#0B1B3D]">
+
+  <!-- TOP BAR -->
+  <div class="bg-[#0B1B3D] text-white text-xs font-medium border-b border-white/10">
+    <div class="site-container h-10 flex items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <span class="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full text-[11px] font-bold bg-[#E5A918] text-[#0B1B3D]">
+          <span class="w-1.5 h-1.5 rounded-full bg-[#0B1B3D] animate-pulse"></span>
+          Admissions Open 2025–26
+        </span>
+        <span class="hidden md:inline text-slate-200 text-xs pl-2">Pre-Primary to Class VIII</span>
+      </div>
+      <div class="flex items-center gap-6 text-xs text-slate-200">
+        <div class="hidden md:flex items-center gap-4 text-xs text-slate-200 truncate">
+        <a href="mailto:info@stmotherteresaschool.in" class="flex items-center gap-1.5 hover:text-[#E5A918] transition">
+          <i class="fa-regular fa-envelope text-[#E5A918]"></i>
+          <span>info@stmotherteresaschool.in</span>
+        </a>
+        <span class="text-white/20">|</span>
+        <div class="flex items-center gap-1.5 truncate">
+          <i class="fa-solid fa-location-dot text-[#E5A918]"></i>
+          <span class="truncate">Baganda Manshatala, Howrah - 711315</span>
+        </div>
+      </div>
+        <a href="tel:8910932575" class="flex items-center gap-1.5 font-bold text-white hover:text-[#E5A918] transition">
+          <i class="fa-solid fa-phone text-[#E5A918]"></i>
+          <span>+91 8910932575</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN NAVIGATION -->
+  <header class="sticky top-0 z-50 bg-white border-b border-slate-200 shadow-xs">
+    <div class="site-container">
+      <div class="flex items-center justify-between h-[84px]">
+        <a href="index.html" class="flex items-center gap-3.5 group">
+          <img src="images/school-logo.png" alt="Crest" class="w-12 h-12 object-contain" />
+          <div>
+            <span class="block font-black text-lg sm:text-xl tracking-tight text-[#0B1B3D] leading-none">ST. MOTHER TERESA</span>
+            <span class="block font-extrabold text-[10px] tracking-[0.2em] text-[#3399FF] uppercase mt-1">INTERNATIONAL SCHOOL</span>
+          </div>
+        </a>
+
+        <nav class="hidden xl:flex items-center gap-7 text-[13.5px] font-bold text-[#0B1B3D]">
+          <a href="index.html" class="hover:text-[#0B1B3D] transition">HOME</a>
+          <a href="about.html" class="hover:text-[#0B1B3D] transition">ABOUT US</a>
+          <a href="principal.html" class="hover:text-[#0B1B3D] transition">PRINCIPAL'S DESK</a>
+          <a href="academics.html" class="text-[#0B1B3D] border-b-2 border-[#E5A918] pb-1">ACADEMICS & TIMINGS</a>
+          <a href="facilities.html" class="hover:text-[#0B1B3D] transition">CAMPUS FACILITIES</a>
+          <a href="carrier.html" class="hover:text-[#0B1B3D] transition">CAREERS & ADMISSIONS</a>
+          
+        </nav>
+
+        
+
+        <button id="mobileMenuBtn" class="xl:hidden p-2 text-slate-700">
+          <i class="fa-solid fa-bars text-xl"></i>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileDrawer" class="hidden xl:hidden bg-white border-t border-slate-200 px-6 py-4 space-y-3 font-bold text-sm shadow-xl">
+      <a href="index.html" class="block py-1.5 text-[#0B1B3D]">HOME</a>
+      <a href="about.html" class="block py-1.5 text-[#0B1B3D]">ABOUT US</a>
+      <a href="principal.html" class="block py-1.5 text-[#0B1B3D]">PRINCIPAL'S DESK</a>
+      <a href="academics.html" class="block py-1.5 text-[#0B1B3D] font-black">ACADEMICS & TIMINGS</a>
+      <a href="facilities.html" class="block py-1.5 text-[#0B1B3D]">CAMPUS FACILITIES</a>
+      <a href="carrier.html" class="hover:text-[#0B1B3D] transition">CAREERS & ADMISSIONS</a>
+      
+    </div>
+  </header>
+
+  <!-- PAGE HERO BANNER -->
+  <section class="bg-[#0B1B3D] text-white py-14 lg:py-20 relative overflow-hidden reveal-on-scroll">
+    <div class="absolute inset-0 bg-gradient-to-r from-[#0B1B3D] via-[#0B1B3D]/90 to-[#0B1B3D]/60 z-0"></div>
+    <div class="site-container relative z-10">
+      <div class="max-w-3xl space-y-3">
+        <span class="text-xs font-extrabold tracking-[0.2em] text-[#E5A918] uppercase">CURRICULAR FRAMEWORK</span>
+        <h1 class="text-3xl sm:text-5xl font-black tracking-tight">Academics & Daily Schedules</h1>
+        <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+          Structured academic learning designed for intellectual curiosity, disciplined focus, and holistic character development.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACADEMIC WINGS -->
+  <section class="py-16 lg:py-24 bg-white border-b border-slate-200 reveal-on-scroll">
+    <div class="site-container space-y-12">
+      
+      <div class="text-center max-w-2xl mx-auto space-y-2">
+        <span class="text-xs font-extrabold tracking-widest text-[#E5A918] uppercase">ACADEMIC DIVISIONS</span>
+        <h2 class="text-2xl sm:text-4xl font-black text-[#0B1B3D]">School Wings & Offerings</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- Wing 1: Pre-Primary -->
+        <div class="p-8 sm:p-10 rounded-2xl bg-[#FAF8F2] border border-slate-200 shadow-md space-y-6 flex flex-col justify-between reveal-from-left delay-100">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="px-3.5 py-1 rounded-full bg-[#E5DFD3] text-[#E5A918] font-black text-xs uppercase tracking-wider">Early Childhood</span>
+              <span class="text-xs font-bold text-slate-500"><i class="fa-regular fa-clock mr-1 text-[#E5A918]"></i> 10:00 AM – 12:00 PM</span>
+            </div>
+            <h3 class="text-2xl font-black text-[#0B1B3D]">Pre-Primary Section</h3>
+            <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+              Foundational play-way learning environment nurturing curiosity, basic sensory development, social bonding, and foundational literacy and numeracy.
+            </p>
+            <ul class="space-y-2.5 text-xs sm:text-sm text-slate-700 font-medium">
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#0B1B3D]"></i> Activity-based sensory discovery</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#0B1B3D]"></i> Emotional security & caring mentors</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#0B1B3D]"></i> Joyful interactive story & play sessions</li>
+            </ul>
+          </div>
+          
+        </div>
+
+        <!-- Wing 2: Classes 1 to 8 -->
+        <div class="p-8 sm:p-10 rounded-2xl bg-[#FAF8F2] border border-slate-200 shadow-md space-y-6 flex flex-col justify-between reveal-from-right delay-200">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="px-3.5 py-1 rounded-full bg-[#E5DFD3] text-[#0B1B3D] font-black text-xs uppercase tracking-wider">Primary & Middle</span>
+              <span class="text-xs font-bold text-slate-500"><i class="fa-regular fa-clock mr-1 text-[#0B1B3D]"></i> 10:00 AM – 4:00 PM</span>
+            </div>
+            <h3 class="text-2xl font-black text-[#0B1B3D]">Classes 1 to 8</h3>
+            <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+              Comprehensive academic curriculum integrating Science, Mathematics, Languages, Social Sciences, STEM labs, digital literacy, and physical education.
+            </p>
+            <ul class="space-y-2.5 text-xs sm:text-sm text-slate-700 font-medium">
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#0B1B3D]"></i> Concept-driven rigorous academics</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#0B1B3D]"></i> Hands-on Science & Computer Lab practicals</li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#0B1B3D]"></i> Co-curricular sports, arts, and value education</li>
+            </ul>
+          </div>
+          
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FACULTY & MENTORSHIP -->
+  <section class="py-16 lg:py-24 bg-[#FAF8F2] border-b border-slate-200 reveal-on-scroll">
+    <div class="site-container">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-6 space-y-6 reveal-from-left">
+          <div class="space-y-2">
+            <span class="text-xs font-extrabold tracking-widest text-[#E5A918] uppercase">OUR EDUCATORS</span>
+            <h2 class="text-2xl sm:text-4xl font-black text-[#0B1B3D]">Teachers – Mentors & Facilitators</h2>
+            <div class="h-1 w-12 bg-[#E5A918] rounded-full"></div>
+          </div>
+          <div class="space-y-4 text-slate-600 text-[15px] sm:text-[16px] leading-[1.7] text-justify">
+            <p>
+              Teachers are the guiding force behind every learner's educational journey. At St. Mother Teresa International School, educators strive to create classrooms that are intellectually stimulating, emotionally secure and conducive to exploration.
+            </p>
+            <p>
+              Our teachers endeavour to move beyond the conventional role of instructors and become mentors, facilitators, motivators and role models. Through continuous professional development and reflective teaching practices, educators remain responsive to the evolving needs of learners and the changing landscape of education.
+            </p>
+          </div>
+        </div>
+        <div class="lg:col-span-6 reveal-from-right delay-200">
+          <div class="rounded-2xl overflow-hidden shadow-xl border border-slate-200">
+            <img src="images/teacher-mentor.jpg" alt="Teachers mentoring students" class="w-full h-[360px] sm:h-[420px] object-cover" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#071228] text-slate-400 text-xs py-12 border-t border-slate-800">
+    <div class="site-container grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div class="space-y-3">
+        <div class="flex items-center gap-2">
+          <img src="images/school-logo.png" alt="Logo" class="w-8 h-8 object-contain" />
+          <span class="font-black text-white text-sm">ST. MOTHER TERESA</span>
+        </div>
+        <p class="text-slate-400 text-xs">Baganda Manshatala, Bhekutal, Talpukur, Howrah - 711315</p>
+        <p class="text-white font-bold">Helpline: +91 8910932575</p>
+      </div>
+      <div>
+        <h4 class="text-white font-bold text-sm mb-3">Quick Links</h4>
+        <ul class="space-y-2">
+          <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
+          <li><a href="principal.html" class="hover:text-white transition">Principal's Desk</a></li>
+          <li><a href="academics.html" class="hover:text-white transition">Academics & Timings</a></li>
+          <li><a href="facilities.html" class="hover:text-white transition">Facilities</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-bold text-sm mb-3">Careers & Admissions</h4>
+        <ul class="space-y-2">
+          <li><a href="carrier.html" class="hover:text-white transition">Admission Process</a></li>
+          <li><a href="carrier.html#apply" class="hover:text-white transition">Application Form</a></li>
+          <li><a href="carrier.html#apply" class="hover:text-white transition">Campus Location & Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-bold text-sm mb-3">School Timings</h4>
+        <p class="text-slate-300">Pre-Primary: 10:00 AM – 12:00 PM</p>
+        <p class="text-slate-300 mt-1">Classes 1 to 8: 10:00 AM – 4:00 PM</p>
+      </div>
+    </div>
+    <div class="site-container pt-8 mt-8 border-t border-slate-800/80 text-center text-slate-500">
+      © 2026 St. Mother Teresa International School. All Rights Reserved.
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('mobileMenuBtn').addEventListener('click', () => {
+      document.getElementById('mobileDrawer').classList.toggle('hidden');
+    });
+  </script>
+
+  <script>
+    // Universal Scroll-Reveal IntersectionObserver
+    document.addEventListener('DOMContentLoaded', () => {
+      const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            // Unobserve once revealed for buttery-smooth performance
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.12,
+        rootMargin: '0px 0px -50px 0px'
+      });
+
+      document.querySelectorAll('.reveal-on-scroll, .reveal-from-left, .reveal-from-right, .reveal-scale').forEach(el => {
+        revealObserver.observe(el);
+      });
+    });
+  </script>
+
+</body>
+</html>

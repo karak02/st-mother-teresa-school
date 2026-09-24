@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Careers & Admissions | St. Mother Teresa International School</title>
+  <meta name="description" content="Admissions, career opportunities, contact information, and campus location for St. Mother Teresa International School." />
+  <link rel="icon" type="image/png" href="images/school-logo.png" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400&display=swap" rel="stylesheet">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-white text-slate-800 antialiased selection:bg-[#E5A918] selection:text-[#0B1B3D]">
+
+  <!-- TOP BAR -->
+  <div class="bg-[#0B1B3D] text-white text-xs font-medium border-b border-white/10">
+    <div class="site-container h-10 flex items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <span class="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full text-[11px] font-bold bg-[#E5A918] text-[#0B1B3D]">
+          <span class="w-1.5 h-1.5 rounded-full bg-[#0B1B3D] animate-pulse"></span>
+          Admissions & Hiring Open 2025–26
+        </span>
+        <span class="hidden md:inline text-slate-200 text-xs pl-2">Pre-Primary to Class VIII</span>
+      </div>
+      <div class="flex items-center gap-6 text-xs text-slate-200">
+        <div class="hidden md:flex items-center gap-4 text-xs text-slate-200 truncate">
+        <a href="mailto:info@stmotherteresaschool.in" class="flex items-center gap-1.5 hover:text-[#E5A918] transition">
+          <i class="fa-regular fa-envelope text-[#E5A918]"></i>
+          <span>info@stmotherteresaschool.in</span>
+        </a>
+        <span class="text-white/20">|</span>
+        <div class="flex items-center gap-1.5 truncate">
+          <i class="fa-solid fa-location-dot text-[#E5A918]"></i>
+          <span class="truncate">Baganda Manshatala, Howrah - 711315</span>
+        </div>
+      </div>
+        <a href="tel:8910932575" class="flex items-center gap-1.5 font-bold text-white hover:text-[#E5A918] transition">
+          <i class="fa-solid fa-phone text-[#E5A918]"></i>
+          <span>+91 8910932575</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN NAVIGATION -->
+  <header class="sticky top-0 z-50 bg-white border-b border-slate-200 shadow-xs">
+    <div class="site-container">
+      <div class="flex items-center justify-between h-[84px]">
+        <a href="index.html" class="flex items-center gap-3.5 group">
+          <img src="images/school-logo.png" alt="Crest" class="w-12 h-12 object-contain" />
+          <div>
+            <span class="block font-black text-lg sm:text-xl tracking-tight text-[#0B1B3D] leading-none">ST. MOTHER TERESA</span>
+            <span class="block font-extrabold text-[10px] tracking-[0.2em] text-[#3399FF] uppercase mt-1">INTERNATIONAL SCHOOL</span>
+          </div>
+        </a>
+
+        <nav class="hidden xl:flex items-center gap-7 text-[13.5px] font-bold text-[#0B1B3D]">
+          <a href="index.html" class="hover:text-[#0B1B3D] transition">HOME</a>
+          <a href="about.html" class="hover:text-[#0B1B3D] transition">ABOUT US</a>
+          <a href="principal.html" class="hover:text-[#0B1B3D] transition">PRINCIPAL'S DESK</a>
+          <a href="academics.html" class="hover:text-[#0B1B3D] transition">ACADEMICS & TIMINGS</a>
+          <a href="facilities.html" class="hover:text-[#0B1B3D] transition">CAMPUS FACILITIES</a>
+          <a href="carrier.html" class="text-[#0B1B3D] border-b-2 border-[#E5A918] pb-1">CAREERS & ADMISSIONS</a>
+        </nav>
+
+        
+
+        <button id="mobileMenuBtn" class="xl:hidden p-2 text-slate-700">
+          <i class="fa-solid fa-bars text-xl"></i>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileDrawer" class="hidden xl:hidden bg-white border-t border-slate-200 px-6 py-4 space-y-3 font-bold text-sm shadow-xl">
+      <a href="index.html" class="block py-1.5 text-[#0B1B3D]">HOME</a>
+      <a href="about.html" class="block py-1.5 text-[#0B1B3D]">ABOUT US</a>
+      <a href="principal.html" class="block py-1.5 text-[#0B1B3D]">PRINCIPAL'S DESK</a>
+      <a href="academics.html" class="block py-1.5 text-[#0B1B3D]">ACADEMICS & TIMINGS</a>
+      <a href="facilities.html" class="block py-1.5 text-[#0B1B3D]">CAMPUS FACILITIES</a>
+      <a href="carrier.html" class="block py-1.5 text-[#0B1B3D] font-black">CAREERS & ADMISSIONS</a>
+    </div>
+  </header>
+
+  <!-- PAGE HERO BANNER -->
+  <section class="bg-[#0B1B3D] text-white py-14 lg:py-20 relative overflow-hidden reveal-on-scroll">
+    <div class="absolute inset-0 bg-gradient-to-r from-[#0B1B3D] via-[#0B1B3D]/90 to-[#0B1B3D]/60 z-0"></div>
+    <div class="site-container relative z-10">
+      <div class="max-w-3xl space-y-3">
+        <span class="text-xs font-extrabold tracking-[0.2em] text-[#E5A918] uppercase">ENROLMENT, CAREERS & CONTACT</span>
+        <h1 class="text-3xl sm:text-5xl font-black tracking-tight">Careers, Admissions & Contact</h1>
+        <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+          Join our growing academic community — apply for student admissions, explore educator opportunities, or visit our campus.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 1: 4-STEP ADMISSION PROCESS -->
+  <section class="py-16 lg:py-20 bg-[#FAF8F2] border-b border-slate-200 reveal-on-scroll">
+    <div class="site-container space-y-10">
+      <div class="text-center max-w-2xl mx-auto space-y-2">
+        <span class="text-xs font-extrabold tracking-widest text-[#E5A918] uppercase">ADMISSION PROCESS 2025–26</span>
+        <h2 class="text-2xl sm:text-4xl font-black text-[#0B1B3D]">How to Apply for Admission</h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-3 reveal-scale delay-100">
+          <div class="w-10 h-10 rounded-full bg-[#E5DFD3] text-[#E5A918] font-black text-sm flex items-center justify-center">01</div>
+          <h3 class="text-lg font-bold text-[#0B1B3D]">Submit Online Form</h3>
+          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">Fill out the basic details in our unified application form below.</p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-3 reveal-scale delay-200">
+          <div class="w-10 h-10 rounded-full bg-[#E5DFD3] text-[#0B1B3D] font-black text-sm flex items-center justify-center">02</div>
+          <h3 class="text-lg font-bold text-[#0B1B3D]">Campus Walkthrough</h3>
+          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">Visit our smart campus and meet our leadership team.</p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-3 reveal-scale delay-300">
+          <div class="w-10 h-10 rounded-full bg-[#E5DFD3] text-[#E5A918] font-black text-sm flex items-center justify-center">03</div>
+          <h3 class="text-lg font-bold text-[#0B1B3D]">Document Submission</h3>
+          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">Submit birth certificate, previous school records, and photographs.</p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-3 reveal-scale delay-400">
+          <div class="w-10 h-10 rounded-full bg-[#E5DFD3] text-[#0B1B3D] font-black text-sm flex items-center justify-center">04</div>
+          <h3 class="text-lg font-bold text-[#0B1B3D]">Enrolment Confirmation</h3>
+          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">Receive formal enrolment letter and complete onboarding.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: UNIFIED APPLICATION & ENQUIRY FORM (MERGED APPLY NOW + CONTACT) -->
+  <section id="apply" class="py-16 lg:py-24 bg-white border-b border-slate-200">
+    <div class="site-container">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        
+        <!-- Left: Unified Application Form -->
+        <div class="lg:col-span-7 space-y-6 reveal-from-left">
+          <div class="space-y-2">
+            <span class="text-xs font-extrabold tracking-widest text-[#E5A918] uppercase">ONLINE APPLICATION</span>
+            <h2 class="text-2xl sm:text-4xl font-black text-[#0B1B3D]">Apply / Get in Touch</h2>
+            <p class="text-slate-600 text-sm">Select whether you are applying for Student Admission, Teaching Careers, or General Enquiry.</p>
+          </div>
+
+          <div class="bg-white border border-slate-200 rounded-3xl p-6 sm:p-10 shadow-2xl space-y-6">
+            <form id="carrierForm" class="space-y-5" onsubmit="handleCarrierSubmit(event)">
+              
+              <!-- Application Type Selector -->
+              <div>
+                <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+                  APPLICATION / ENQUIRY TYPE *
+                </label>
+                <select id="applicationType" required onchange="toggleFormFields()" class="w-full h-12 px-4 rounded-xl border border-slate-300 focus:border-[#E5A918] focus:ring-2 focus:ring-[#E5A918]/30 focus:outline-none text-sm bg-slate-50 transition">
+                  <option value="Admission Enquiry" selected>Student Admission Enquiry</option>
+                  <option value="Teaching Career">Career / Job Application (Faculty & Staff)</option>
+                  <option value="General Contact">General Contact / Query</option>
+                </select>
+              </div>
+
+              <!-- Name and Parent/Guardian Name -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2" id="nameLabel">
+                    STUDENT FULL NAME *
+                  </label>
+                  <input type="text" id="applicantName" required placeholder="Full name" class="w-full h-12 px-4 rounded-xl border border-slate-300 focus:border-[#E5A918] focus:ring-2 focus:ring-[#E5A918]/30 focus:outline-none text-sm bg-slate-50 transition" />
+                </div>
+
+                <div id="guardianField">
+                  <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+                    PARENT / GUARDIAN NAME *
+                  </label>
+                  <input type="text" id="guardianName" placeholder="Parent/Guardian name" class="w-full h-12 px-4 rounded-xl border border-slate-300 focus:border-[#E5A918] focus:ring-2 focus:ring-[#E5A918]/30 focus:outline-none text-sm bg-slate-50 transition" />
+                </div>
+              </div>
+
+              <!-- Class or Position & Phone -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div id="classField">
+                  <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+                    APPLYING CLASS *
+                  </label>
+                  <select id="studClass" class="w-full h-12 px-4 rounded-xl border border-slate-300 focus:border-[#E5A918] focus:ring-2 focus:ring-[#E5A918]/30 focus:outline-none text-sm bg-slate-50 transition">
+                    <option value="" disabled selected>Select Grade / Class</option>
+                    <option value="Pre-Primary Section (10AM to 12PM)">Pre-Primary Section (10AM to 12PM)</option>
+                    <option value="Class 1 (10AM to 4PM)">Class 1 (10AM to 4PM)</option>
+                    <option value="Class 2 (10AM to 4PM)">Class 2 (10AM to 4PM)</option>
+                    <option value="Class 3 (10AM to 4PM)">Class 3 (10AM to 4PM)</option>
+                    <option value="Class 4 (10AM to 4PM)">Class 4 (10AM to 4PM)</option>
+                    <option value="Class 5 (10AM to 4PM)">Class 5 (10AM to 4PM)</option>
+                    <option value="Class 6 (10AM to 4PM)">Class 6 (10AM to 4PM)</option>
+                    <option value="Class 7 (10AM to 4PM)">Class 7 (10AM to 4PM)</option>
+                    <option value="Class 8 (10AM to 4PM)">Class 8 (10AM to 4PM)</option>
+                  </select>
+                </div>
+
+                <div id="positionField" class="hidden">
+                  <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+                    POSITION APPLIED FOR *
+                  </label>
+                  <input type="text" id="jobPosition" placeholder="e.g. Primary Teacher, Math Faculty" class="w-full h-12 px-4 rounded-xl border border-slate-300 focus:border-[#E5A918] focus:ring-2 focus:ring-[#E5A918]/30 focus:outline-none text-sm bg-slate-50 transition" />
+                </div>
+
+                <div>
+                  <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+                    CONTACT PHONE NUMBER *
+                  </label>
+                  <input type="tel" id="contactPhone" required placeholder="Phone number" class="w-full h-12 px-4 rounded-xl border border-slate-300 focus:border-[#E5A918] focus:ring-2 focus:ring-[#E5A918]/30 focus:outline-none text-sm bg-slate-50 transition" />
+                </div>
+              </div>
+
+              <!-- Message / Query Box -->
+              <div>
+                <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+                  MESSAGE / EXPERIENCE / ANY OTHER QUERY (OPTIONAL)
+                </label>
+                <textarea id="queryMessage" rows="3" placeholder="Write any query, qualifications, or specific requirements..." class="w-full p-4 rounded-xl border border-slate-300 focus:border-[#E5A918] focus:ring-2 focus:ring-[#E5A918]/30 focus:outline-none text-sm bg-slate-50 transition resize-none"></textarea>
+              </div>
+
+              <!-- Submit CTA -->
+              <button type="submit" class="w-full h-12 rounded-xl bg-[#E5A918] hover:bg-[#C8900E] text-white font-black text-sm tracking-wide shadow-md transition flex items-center justify-center gap-2">
+                <span>SUBMIT APPLICATION / ENQUIRY</span>
+                <span>→</span>
+              </button>
+            </form>
+
+            <div id="carrierSuccess" class="hidden p-4 rounded-xl bg-[#E5DFD3] border border-[#3399FF]/20 text-[#0B1B3D] text-xs space-y-1">
+              <p class="font-bold text-sm text-[#0B1B3D]">Submitted Successfully!</p>
+              <p class="text-slate-600">Thank you for connecting with St. Mother Teresa International School. Our office will respond to your submission promptly.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Contact Details & Campus Directions -->
+        <div class="lg:col-span-5 space-y-6 reveal-from-right delay-200">
+          <div class="space-y-2">
+            <span class="text-xs font-extrabold tracking-widest text-[#0B1B3D] uppercase">CONTACT & CAMPUS</span>
+            <h2 class="text-2xl sm:text-3xl font-black text-[#0B1B3D]">Visit Our Campus</h2>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-[#FAF8F2] border border-slate-200 space-y-4">
+            <div class="flex items-start gap-3.5">
+              <div class="w-9 h-9 rounded-full bg-[#E5DFD3] text-[#E5A918] flex items-center justify-center text-sm flex-shrink-0 mt-0.5">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div class="space-y-1">
+                <h4 class="font-bold text-[#0B1B3D] text-xs uppercase tracking-wide">Campus Address</h4>
+                <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                  Baganda Manshatala, Bhekutal, Talpukur, Howrah – 711315
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3.5 pt-3 border-t border-slate-200">
+              <div class="w-9 h-9 rounded-full bg-[#E5DFD3] text-[#0B1B3D] flex items-center justify-center text-sm flex-shrink-0 mt-0.5">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <div class="space-y-1">
+                <h4 class="font-bold text-[#0B1B3D] text-xs uppercase tracking-wide">Official Helpline</h4>
+                <a href="tel:8910932575" class="text-[#0B1B3D] font-bold text-sm hover:underline block">
+                  +91 8910932575
+                </a>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3.5 pt-3 border-t border-slate-200">
+              <div class="w-9 h-9 rounded-full bg-[#E5DFD3] text-[#E5A918] flex items-center justify-center text-sm flex-shrink-0 mt-0.5">
+                <i class="fa-regular fa-clock"></i>
+              </div>
+              <div class="space-y-1">
+                <h4 class="font-bold text-[#0B1B3D] text-xs uppercase tracking-wide">Office Timings</h4>
+                <p class="text-slate-600 text-xs">Monday to Saturday: 9:00 AM – 4:00 PM</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Map -->
+          <div class="h-[280px] rounded-2xl overflow-hidden border border-slate-300 shadow-md bg-slate-100">
+            <iframe 
+              src="https://www.openstreetmap.org/export/embed.html?bbox=88.0672%2C22.4627%2C88.1072%2C22.5027&amp;layer=mapnik&amp;marker=22.4827%2C88.0872" 
+              class="w-full h-full border-0"
+              loading="lazy" 
+              title="Campus Map">
+            </iframe>
+          </div>
+
+          <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 text-xs flex items-center justify-between">
+            <span class="text-slate-600">Get step-by-step directions on Google Maps:</span>
+            <a href="https://maps.google.com/?q=Baganda+Manshatala+Bhekutal+Talpukur+Howrah+711315" target="_blank" class="font-bold text-[#0B1B3D] hover:underline flex items-center gap-1">
+              <span>Directions</span> <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#071228] text-slate-400 text-xs py-12 border-t border-slate-800">
+    <div class="site-container grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div class="space-y-3">
+        <div class="flex items-center gap-2">
+          <img src="images/school-logo.png" alt="Logo" class="w-8 h-8 object-contain" />
+          <span class="font-black text-white text-sm">ST. MOTHER TERESA</span>
+        </div>
+        <p class="text-slate-400 text-xs">Baganda Manshatala, Bhekutal, Talpukur, Howrah - 711315</p>
+        <p class="text-white font-bold">Helpline: +91 8910932575</p>
+      </div>
+      <div>
+        <h4 class="text-white font-bold text-sm mb-3">Quick Links</h4>
+        <ul class="space-y-2">
+          <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
+          <li><a href="principal.html" class="hover:text-white transition">Principal's Desk</a></li>
+          <li><a href="academics.html" class="hover:text-white transition">Academics & Timings</a></li>
+          <li><a href="facilities.html" class="hover:text-white transition">Facilities</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-bold text-sm mb-3">Careers & Admissions</h4>
+        <ul class="space-y-2">
+          <li><a href="carrier.html" class="hover:text-white transition">Admission Process</a></li>
+          <li><a href="carrier.html#apply" class="hover:text-white transition">Online Application Form</a></li>
+          <li><a href="carrier.html#apply" class="hover:text-white transition">Campus Location & Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-bold text-sm mb-3">School Timings</h4>
+        <p class="text-slate-300">Pre-Primary: 10:00 AM – 12:00 PM</p>
+        <p class="text-slate-300 mt-1">Classes 1 to 8: 10:00 AM – 4:00 PM</p>
+      </div>
+    </div>
+    <div class="site-container pt-8 mt-8 border-t border-slate-800/80 text-center text-slate-500">
+      © 2026 St. Mother Teresa International School. All Rights Reserved.
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('mobileMenuBtn').addEventListener('click', () => {
+      document.getElementById('mobileDrawer').classList.toggle('hidden');
+    });
+
+    function toggleFormFields() {
+      const type = document.getElementById('applicationType').value;
+      const guardianField = document.getElementById('guardianField');
+      const classField = document.getElementById('classField');
+      const positionField = document.getElementById('positionField');
+      const nameLabel = document.getElementById('nameLabel');
+
+      if (type === 'Teaching Career') {
+        guardianField.classList.add('hidden');
+        classField.classList.add('hidden');
+        positionField.classList.remove('hidden');
+        nameLabel.innerText = 'CANDIDATE FULL NAME *';
+      } else if (type === 'General Contact') {
+        guardianField.classList.add('hidden');
+        classField.classList.add('hidden');
+        positionField.classList.add('hidden');
+        nameLabel.innerText = 'YOUR FULL NAME *';
+      } else {
+        guardianField.classList.remove('hidden');
+        classField.classList.remove('hidden');
+        positionField.classList.add('hidden');
+        nameLabel.innerText = 'STUDENT FULL NAME *';
+      }
+    }
+
+    function handleCarrierSubmit(e) {
+      e.preventDefault();
+      document.getElementById('carrierSuccess').classList.remove('hidden');
+      document.getElementById('carrierForm').reset();
+    }
+  </script>
+
+  <script>
+    // Universal Scroll-Reveal IntersectionObserver
+    document.addEventListener('DOMContentLoaded', () => {
+      const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            // Unobserve once revealed for buttery-smooth performance
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.12,
+        rootMargin: '0px 0px -50px 0px'
+      });
+
+      document.querySelectorAll('.reveal-on-scroll, .reveal-from-left, .reveal-from-right, .reveal-scale').forEach(el => {
+        revealObserver.observe(el);
+      });
+    });
+  </script>
+
+</body>
+</html>
