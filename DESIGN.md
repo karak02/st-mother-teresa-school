@@ -1,7 +1,7 @@
 ---
 version: alpha
 name: St. Mother Teresa International School
-description: Modern Academic Prestige with Dynamic Blue & Teal Gradient Catalysts.
+description: Modern Academic Prestige with Very Light Cream Canvas (#FDFCF7) & Dynamic Blue-Teal Gradient Catalysts.
 colors:
   primary-gradient: "linear-gradient(135deg, #0A58CA 0%, #0284C7 50%, #0D9488 100%)"
   oxford-navy: "#0A1E42"
@@ -9,8 +9,9 @@ colors:
   accent-yellow: "#F5A623"
   accent-maroon: "#8B1E2B"
   accent-orange: "#F97316"
-  surface: "#FFFFFF"
-  surface-warm: "#FEF9E8"
+  canvas-cream: "#FDFCF7"
+  canvas-cream-soft: "#FAF7F2"
+  surface-card: "#FFFFFF"
   border-soft: "#E2E8F0"
 typography:
   font-heading: Inter, sans-serif
@@ -41,49 +42,51 @@ rounded:
 components:
   button-primary:
     background: "{colors.primary-gradient}"
-    textColor: "{colors.surface}"
+    textColor: "{colors.surface-card}"
     rounded: "{rounded.pill}"
     padding: "14px 32px"
   header-bar:
     backgroundColor: "{colors.oxford-navy}"
-    textColor: "{colors.surface}"
+    textColor: "{colors.surface-card}"
   badge-active:
     backgroundColor: "{colors.accent-yellow}"
     textColor: "{colors.oxford-navy}"
     rounded: "{rounded.pill}"
   badge-accolade:
     backgroundColor: "{colors.accent-maroon}"
-    textColor: "{colors.surface}"
+    textColor: "{colors.surface-card}"
     rounded: "{rounded.pill}"
   card-container:
-    backgroundColor: "{colors.surface}"
+    backgroundColor: "{colors.surface-card}"
     borderColor: "{colors.border-soft}"
     rounded: "{rounded.xl}"
 ---
 
 ## Overview
 
-A prestigious institutional design system combining the deep authority of **Oxford Royal Navy** with energetic **Blue & Teal Gradient Catalysts** (`#0A58CA` → `#0284C7` → `#0D9488`), punctuated by **Academic Yellow**, **Collegiate Maroon**, and **Vibrant Orange**.
+A prestigious institutional design system built upon a warm, luxurious **Very Light Cream Canvas (`#FDFCF7`)**, offering high visual comfort while cards and containers elevate with crisp **Pure White (`#FFFFFF`)** and **Blue-Teal Gradient Catalysts**.
 
 ## Color Hierarchy
 
-1. **Blue & Teal Gradient (`linear-gradient(135deg, #0A58CA 0%, #0284C7 50%, #0D9488 100%)`):**
-   - *Role:* Primary CTAs, main action buttons, active navigation indicators, and luminous gradient text highlights.
+1. **Very Light Cream Canvas (`#FDFCF7` / `rgb(253, 252, 247)`):**
+   - *Role:* Primary background canvas across all pages, replacing harsh stark white with warm, relaxed elegance.
 
-2. **Oxford Royal Navy (`#0A1E42` / `rgb(10, 30, 66)`):**
-   - *Role:* Institutional foundation, top utility bar, hero background overlays, impact statistics strip, flagship box, and footer.
+2. **Soft Cream Secondary Surface (`#FAF7F2` / `rgb(250, 247, 242)`):**
+   - *Role:* Alternating section backgrounds, chapter narratives, and divisions.
 
-3. **Academic Yellow (`#F5A623` / `rgb(245, 166, 35)`):**
-   - *Role:* Admissions badge pills, active indicators, live announcement ticker tag, and Motto flagship card.
+3. **Pure White (`#FFFFFF`):**
+   - *Role:* Elevated cards, lightbox modals, form input fields, and contrast text on dark containers.
 
-4. **Collegiate Maroon (`#8B1E2B` / `rgb(139, 30, 43)`):**
-   - *Role:* Ideal Principal Award badge, leadership accolades, and Educational Philosophy card.
+4. **Blue & Teal Gradient (`linear-gradient(135deg, #0A58CA 0%, #0284C7 50%, #0D9488 100%)`):**
+   - *Role:* Primary CTAs, active indicators, and headline gradient accents.
 
-5. **Vibrant Orange (`#F97316` / `rgb(249, 115, 22)`):**
-   - *Role:* Sub-branding `INTERNATIONAL SCHOOL` logo text, visionary tags, and discovery indicators.
+5. **Oxford Royal Navy (`#0A1E42`):**
+   - *Role:* Institutional foundation, top utility bar, hero background overlays, impact statistics strip, and footer.
 
-6. **Pure White (`#FFFFFF`) & Warm Ivory (`#FEF9E8`):**
-   - *Role:* Clean page background, card surfaces, and crisp text on dark sections.
+6. **Accent Tones:**
+   - **Academic Yellow (`#F5A623`)** for admissions pills and motto card.
+   - **Collegiate Maroon (`#8B1E2B`)** for awards and philosophy card.
+   - **Vibrant Orange (`#F97316`)** for logo sub-text and discovery tags.
 
 ## Typography
 

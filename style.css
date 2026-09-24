@@ -1,5 +1,5 @@
 /* Shared CSS for St. Mother Teresa International School */
-/* Color System: Blue-Teal Gradient, Oxford Navy (#0A1E42), Yellow (#F5A623), Maroon (#8B1E2B), Orange (#F97316) & Pure White */
+/* Color System: Blue-Teal Gradient, Oxford Navy (#0A1E42), Yellow (#F5A623), Maroon (#8B1E2B), Orange (#F97316) on Very Light Cream Canvas (#FDFCF7) */
 
 :root {
   --color-navy: #0A1E42;            /* Oxford Deep Royal Navy */
@@ -9,8 +9,9 @@
   --color-orange: #F97316;          /* Vibrant Orange */
   --color-teal: #0D9488;            /* Deep Teal */
   --color-blue: #0A58CA;            /* Deep Royal Blue */
-  --color-white: #FFFFFF;
-  --color-surface: #F8FAFC;
+  --color-cream-bg: #FDFCF7;        /* Very Light Cream Page Canvas */
+  --color-cream-soft: #FAF7F2;      /* Soft Light Cream Section Surface */
+  --color-white: #FFFFFF;           /* Card White */
   --color-border: #E2E8F0;
   --gradient-blue-teal: linear-gradient(135deg, #0A58CA 0%, #0284C7 50%, #0D9488 100%);
   --gradient-blue-teal-hover: linear-gradient(135deg, #084298 0%, #0369A1 50%, #0B7264 100%);
@@ -25,7 +26,7 @@ html, body {
 body {
   font-family: 'Roboto', sans-serif;
   color: #0A1E42;
-  background-color: #FFFFFF;
+  background-color: #FDFCF7;
 }
 
 h1, h2, h3, h4, h5, h6, nav, button, .font-heading {
