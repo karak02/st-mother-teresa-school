@@ -3,9 +3,3 @@
 Thumbs.db
 *.tmp
 *.log
-
-# Dependencies & Secrets
-node_modules/
-.env
-.env.local
-.env.*.local
