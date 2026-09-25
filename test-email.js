@@ -47,35 +47,56 @@ async function runTest() {
       from: `"St. Mother Teresa International School" <${config.auth.user}>`,
       to: config.receiver,
       replyTo: config.auth.user,
-      subject: '✅ Verification: Auto-Email Form Notifications Active',
-      text: 'Congratulations! Your GoDaddy SMTP email configuration is active and working properly. You will now receive automatic email alerts whenever anyone submits a form on your school website.',
+      subject: 'New Admission Enquiry: Test Student',
+      text: `New Admission Enquiry:
+----------------------------------------
+Name: Test Student
+Guardian Name: Test Parent
+Class: Class 1 (10AM to 4PM)
+Phone: +91 98765 43210
+Email: parent@example.com
+Message / Query:
+Testing simple email format delivery.
+----------------------------------------
+St. Mother Teresa International School Website`,
       html: `
-        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden; background: #ffffff;">
-          <div style="background: linear-gradient(135deg, #0A58CA, #0D9488); padding: 24px; text-align: center; color: #ffffff;">
-            <h2 style="margin: 0; font-size: 20px;">St. Mother Teresa International School</h2>
-            <p style="margin: 6px 0 0 0; font-size: 13px; opacity: 0.9;">Website Form Email Dispatcher</p>
+        <div style="font-family: Arial, sans-serif; font-size: 14px; color: #1e293b; line-height: 1.6; max-width: 560px; margin: 0 auto; padding: 24px; border: 1px solid #e2e8f0; border-radius: 8px; background-color: #ffffff;">
+          <h2 style="margin-top: 0; margin-bottom: 16px; color: #0A58CA; border-bottom: 2px solid #0A58CA; padding-bottom: 8px; font-size: 18px;">
+            New Admission Enquiry
+          </h2>
+          
+          <table style="width: 100%; border-collapse: collapse; font-size: 14px; margin-bottom: 16px;">
+            <tbody>
+              <tr>
+                <td style="padding: 6px 0; color: #64748b; width: 35%; font-weight: bold;">Name:</td>
+                <td style="padding: 6px 0; color: #0f172a; font-weight: bold;">Test Student</td>
+              </tr>
+              <tr>
+                <td style="padding: 6px 0; color: #64748b; font-weight: bold;">Guardian Name:</td>
+                <td style="padding: 6px 0; color: #0f172a;">Test Parent</td>
+              </tr>
+              <tr>
+                <td style="padding: 6px 0; color: #64748b; font-weight: bold;">Class / Position:</td>
+                <td style="padding: 6px 0; color: #0f172a;">Class 1 (10AM to 4PM)</td>
+              </tr>
+              <tr>
+                <td style="padding: 6px 0; color: #64748b; font-weight: bold;">Phone:</td>
+                <td style="padding: 6px 0; color: #0f172a;"><a href="tel:+919876543210" style="color: #0A58CA; text-decoration: none;">+91 98765 43210</a></td>
+              </tr>
+              <tr>
+                <td style="padding: 6px 0; color: #64748b; font-weight: bold;">Email:</td>
+                <td style="padding: 6px 0; color: #0f172a;"><a href="mailto:parent@example.com" style="color: #0A58CA; text-decoration: none;">parent@example.com</a></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div style="margin-top: 12px; margin-bottom: 20px;">
+            <p style="margin: 0 0 6px 0; font-weight: bold; color: #64748b; font-size: 13px;">Message / Query:</p>
+            <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 12px; border-radius: 6px; font-size: 13px; color: #334155; white-space: pre-wrap;">Testing simple email format delivery.</div>
           </div>
-          <div style="padding: 24px; color: #334155;">
-            <div style="background: #ecfdf5; border-left: 4px solid #10b981; padding: 14px 16px; margin-bottom: 20px; border-radius: 4px;">
-              <p style="margin: 0; font-size: 15px; font-weight: bold; color: #065f46;">
-                🎉 SMTP Integration Test Successful!
-              </p>
-              <p style="margin: 4px 0 0 0; font-size: 13px; color: #047857;">
-                Emails are now ready to be automatically dispatched to your inbox upon form submission.
-              </p>
-            </div>
-            <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 14px 16px; margin-bottom: 20px; border-radius: 6px;">
-              <p style="margin: 0; font-size: 13px; color: #0f172a;"><strong>SMTP Host:</strong> ${config.host}:${config.port}</p>
-              <p style="margin: 6px 0 0 0; font-size: 13px; color: #0f172a;"><strong>Sender Mailbox:</strong> ${config.auth.user}</p>
-              <p style="margin: 6px 0 0 0; font-size: 13px; color: #0f172a;"><strong>Receiver Inbox:</strong> ${config.receiver}</p>
-            </div>
-            <p style="font-size: 13px; color: #64748b; line-height: 1.6;">
-              When any parent or applicant fills out the <strong>Admission Enquiry</strong> or <strong>Career Form</strong> on the website, this mailbox will immediately receive their submitted details.
-            </p>
-          </div>
-          <div style="background: #f1f5f9; padding: 12px; text-align: center; font-size: 11px; color: #94a3b8;">
-            © 2026 St. Mother Teresa International School Website Automation
-          </div>
+
+          <hr style="margin-top: 20px; margin-bottom: 12px; border: none; border-top: 1px solid #e2e8f0;" />
+          <p style="font-size: 11px; color: #94a3b8; margin: 0;">Sent from St. Mother Teresa International School Website</p>
         </div>
       `,
     });

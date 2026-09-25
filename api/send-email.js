@@ -101,72 +101,65 @@ module.exports = async (req, res) => {
       connectionTimeout: 15000,
     });
 
-    const emailSubject = `🔔 New ${formType} Submission: ${name}`;
+    const emailSubject = `New ${formType}: ${name}`;
+
+    const textContent = `New ${formType} Submission:
+----------------------------------------
+Name: ${name}
+${guardianName ? `Guardian: ${guardianName}\n` : ''}Applying For / Class: ${details || 'N/A'}
+Phone: ${contactPhone || 'N/A'}
+${email ? `Email: ${email}\n` : ''}
+Message / Query:
+${userMessage || 'None provided'}
+----------------------------------------
+St. Mother Teresa International School Website`;
 
     const htmlContent = `
-      <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; max-width: 620px; margin: 0 auto; border: 1px solid #e2e8f0; border-radius: 16px; overflow: hidden; background-color: #ffffff;">
-        <div style="background: linear-gradient(135deg, #0A58CA 0%, #0D9488 100%); padding: 28px 24px; text-align: center; color: #ffffff;">
-          <h1 style="margin: 0; font-size: 22px; font-weight: 800; letter-spacing: -0.5px;">St. Mother Teresa International School</h1>
-          <p style="margin: 6px 0 0 0; font-size: 13px; opacity: 0.9; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">New Form Submission</p>
+      <div style="font-family: Arial, sans-serif; font-size: 14px; color: #1e293b; line-height: 1.6; max-width: 560px; margin: 0 auto; padding: 24px; border: 1px solid #e2e8f0; border-radius: 8px; background-color: #ffffff;">
+        <h2 style="margin-top: 0; margin-bottom: 16px; color: #0A58CA; border-bottom: 2px solid #0A58CA; padding-bottom: 8px; font-size: 18px;">
+          New ${formType}
+        </h2>
+        
+        <table style="width: 100%; border-collapse: collapse; font-size: 14px; margin-bottom: 16px;">
+          <tbody>
+            <tr>
+              <td style="padding: 6px 0; color: #64748b; width: 35%; font-weight: bold;">Name:</td>
+              <td style="padding: 6px 0; color: #0f172a; font-weight: bold;">${name}</td>
+            </tr>
+            ${
+              guardianName
+                ? `<tr>
+                    <td style="padding: 6px 0; color: #64748b; font-weight: bold;">Guardian Name:</td>
+                    <td style="padding: 6px 0; color: #0f172a;">${guardianName}</td>
+                  </tr>`
+                : ''
+            }
+            <tr>
+              <td style="padding: 6px 0; color: #64748b; font-weight: bold;">Class / Position:</td>
+              <td style="padding: 6px 0; color: #0f172a;">${details || 'N/A'}</td>
+            </tr>
+            <tr>
+              <td style="padding: 6px 0; color: #64748b; font-weight: bold;">Phone:</td>
+              <td style="padding: 6px 0; color: #0f172a;"><a href="tel:${contactPhone}" style="color: #0A58CA; text-decoration: none;">${contactPhone || 'N/A'}</a></td>
+            </tr>
+            ${
+              email
+                ? `<tr>
+                    <td style="padding: 6px 0; color: #64748b; font-weight: bold;">Email:</td>
+                    <td style="padding: 6px 0; color: #0f172a;"><a href="mailto:${email}" style="color: #0A58CA; text-decoration: none;">${email}</a></td>
+                  </tr>`
+                : ''
+            }
+          </tbody>
+        </table>
+
+        <div style="margin-top: 12px; margin-bottom: 20px;">
+          <p style="margin: 0 0 6px 0; font-weight: bold; color: #64748b; font-size: 13px;">Message / Query:</p>
+          <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 12px; border-radius: 6px; font-size: 13px; color: #334155; white-space: pre-wrap;">${userMessage || 'None provided'}</div>
         </div>
 
-        <div style="padding: 28px 24px; color: #1e293b;">
-          <div style="display: inline-block; background-color: #e0f2fe; color: #0369a1; padding: 6px 14px; border-radius: 9999px; font-size: 12px; font-weight: 700; margin-bottom: 20px;">
-            ${formType}
-          </div>
-
-          <table style="width: 100%; border-collapse: collapse; font-size: 14px; margin-bottom: 24px;">
-            <tbody>
-              <tr style="border-bottom: 1px solid #f1f5f9;">
-                <td style="padding: 10px 0; color: #64748b; font-weight: 600; width: 38%;">Applicant / Student Name</td>
-                <td style="padding: 10px 0; color: #0f172a; font-weight: 700;">${name}</td>
-              </tr>
-              ${
-                guardianName
-                  ? `<tr style="border-bottom: 1px solid #f1f5f9;">
-                      <td style="padding: 10px 0; color: #64748b; font-weight: 600;">Parent / Guardian Name</td>
-                      <td style="padding: 10px 0; color: #0f172a; font-weight: 600;">${guardianName}</td>
-                    </tr>`
-                  : ''
-              }
-              <tr style="border-bottom: 1px solid #f1f5f9;">
-                <td style="padding: 10px 0; color: #64748b; font-weight: 600;">Applying Class / Role</td>
-                <td style="padding: 10px 0; color: #0f172a; font-weight: 600;">${details || 'N/A'}</td>
-              </tr>
-              <tr style="border-bottom: 1px solid #f1f5f9;">
-                <td style="padding: 10px 0; color: #64748b; font-weight: 600;">Phone Number</td>
-                <td style="padding: 10px 0; color: #0f172a; font-weight: 700;">
-                  <a href="tel:${contactPhone}" style="color: #0A58CA; text-decoration: none;">${contactPhone || 'N/A'}</a>
-                </td>
-              </tr>
-              ${
-                email
-                  ? `<tr style="border-bottom: 1px solid #f1f5f9;">
-                      <td style="padding: 10px 0; color: #64748b; font-weight: 600;">Email Address</td>
-                      <td style="padding: 10px 0; color: #0f172a; font-weight: 600;">
-                        <a href="mailto:${email}" style="color: #0A58CA; text-decoration: none;">${email}</a>
-                      </td>
-                    </tr>`
-                  : ''
-              }
-            </tbody>
-          </table>
-
-          <div style="background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px; margin-bottom: 24px;">
-            <p style="margin: 0 0 6px 0; font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px;">Message / Query:</p>
-            <p style="margin: 0; font-size: 13px; color: #334155; line-height: 1.5; white-space: pre-wrap;">${userMessage || 'None provided'}</p>
-          </div>
-
-          <div style="text-align: center;">
-            <a href="tel:${contactPhone}" style="display: inline-block; background: #0A58CA; color: #ffffff; text-decoration: none; padding: 12px 24px; border-radius: 8px; font-size: 13px; font-weight: 700;">
-              Call Applicant Now
-            </a>
-          </div>
-        </div>
-
-        <div style="background-color: #f8fafc; border-top: 1px solid #e2e8f0; padding: 16px 24px; text-align: center; font-size: 11px; color: #94a3b8;">
-          This is an automated notification sent from the official website of St. Mother Teresa International School.
-        </div>
+        <hr style="margin-top: 20px; margin-bottom: 12px; border: none; border-top: 1px solid #e2e8f0;" />
+        <p style="font-size: 11px; color: #94a3b8; margin: 0;">Sent from St. Mother Teresa International School Website</p>
       </div>
     `;
 
@@ -215,7 +208,7 @@ module.exports = async (req, res) => {
         to: receiver,
         replyTo: email || smtpUser,
         subject: emailSubject,
-        text: `New ${formType} submission:\n\nName: ${name}\nPhone: ${contactPhone}\nDetails: ${details}\nMessage: ${userMessage}`,
+        text: textContent,
         html: htmlContent,
       }),
       saveToAirtable({
