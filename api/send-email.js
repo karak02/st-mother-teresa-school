@@ -1,4 +1,46 @@
 const nodemailer = require('nodemailer');
+const https = require('https');
+
+// Helper to save records directly to Airtable
+function saveToAirtable({ baseId, token, tableName, fields }) {
+  return new Promise((resolve) => {
+    if (!token || !baseId) return resolve(null);
+
+    const payload = JSON.stringify({
+      records: [{ fields }]
+    });
+
+    const req = https.request({
+      hostname: 'api.airtable.com',
+      path: `/v0/${baseId}/${encodeURIComponent(tableName)}`,
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${token}`,
+        'Content-Type': 'application/json',
+        'Content-Length': Buffer.byteLength(payload)
+      },
+      timeout: 8000
+    }, (res) => {
+      let data = '';
+      res.on('data', chunk => data += chunk);
+      res.on('end', () => {
+        try {
+          resolve(JSON.parse(data));
+        } catch {
+          resolve({ status: res.statusCode });
+        }
+      });
+    });
+
+    req.on('error', (err) => {
+      console.error('Airtable sync error:', err.message);
+      resolve(null);
+    });
+
+    req.write(payload);
+    req.end();
+  });
+}
 
 module.exports = async (req, res) => {
   // Set CORS headers
@@ -32,16 +74,22 @@ module.exports = async (req, res) => {
     } = req.body || {};
 
     const name = applicantName || studentName || 'Not specified';
-    const contactPhone = phone || 'Not specified';
-    const details = applyingClass || jobPosition || 'N/A';
-    const userMessage = message || 'None provided';
+    const contactPhone = phone || '';
+    const details = applyingClass || jobPosition || '';
+    const userMessage = message || '';
 
+    // GoDaddy SMTP Configuration
     const smtpHost = process.env.GODADDY_SMTP_HOST || 'smtpout.secureserver.net';
     const smtpPort = parseInt(process.env.GODADDY_SMTP_PORT || '465', 10);
     const smtpUser = process.env.GODADDY_EMAIL_USER || 'office@stmtinternationalschool.com';
-    const smtpPass = process.env.GODADDY_EMAIL_PASS || 'boroMAABABA123@';
+    const smtpPass = process.env.GODADDY_EMAIL_PASS;
     const receiver = process.env.NOTIFICATION_RECEIVER || 'office@stmtinternationalschool.com';
 
+    // Airtable Configuration
+    const airtableToken = process.env.AIRTABLE_PAT;
+    const airtableBaseId = process.env.AIRTABLE_BASE_ID || 'appobdzv7otsf1fIF';
+
+    // 1. Send Email Notification
     const transporter = nodemailer.createTransport({
       host: smtpHost,
       port: smtpPort,
@@ -50,6 +98,7 @@ module.exports = async (req, res) => {
         user: smtpUser,
         pass: smtpPass,
       },
+      connectionTimeout: 15000,
     });
 
     const emailSubject = `🔔 New ${formType} Submission: ${name}`;
@@ -82,12 +131,12 @@ module.exports = async (req, res) => {
               }
               <tr style="border-bottom: 1px solid #f1f5f9;">
                 <td style="padding: 10px 0; color: #64748b; font-weight: 600;">Applying Class / Role</td>
-                <td style="padding: 10px 0; color: #0f172a; font-weight: 600;">${details}</td>
+                <td style="padding: 10px 0; color: #0f172a; font-weight: 600;">${details || 'N/A'}</td>
               </tr>
               <tr style="border-bottom: 1px solid #f1f5f9;">
                 <td style="padding: 10px 0; color: #64748b; font-weight: 600;">Phone Number</td>
                 <td style="padding: 10px 0; color: #0f172a; font-weight: 700;">
-                  <a href="tel:${contactPhone}" style="color: #0A58CA; text-decoration: none;">${contactPhone}</a>
+                  <a href="tel:${contactPhone}" style="color: #0A58CA; text-decoration: none;">${contactPhone || 'N/A'}</a>
                 </td>
               </tr>
               ${
@@ -105,7 +154,7 @@ module.exports = async (req, res) => {
 
           <div style="background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px; margin-bottom: 24px;">
             <p style="margin: 0 0 6px 0; font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px;">Message / Query:</p>
-            <p style="margin: 0; font-size: 13px; color: #334155; line-height: 1.5; white-space: pre-wrap;">${userMessage}</p>
+            <p style="margin: 0; font-size: 13px; color: #334155; line-height: 1.5; white-space: pre-wrap;">${userMessage || 'None provided'}</p>
           </div>
 
           <div style="text-align: center;">
@@ -116,26 +165,78 @@ module.exports = async (req, res) => {
         </div>
 
         <div style="background-color: #f8fafc; border-top: 1px solid #e2e8f0; padding: 16px 24px; text-align: center; font-size: 11px; color: #94a3b8;">
-          This is an automated notification sent from the official website contact form of St. Mother Teresa International School.
+          This is an automated notification sent from the official website of St. Mother Teresa International School.
         </div>
       </div>
     `;
 
-    await transporter.sendMail({
-      from: `"STMT School Website" <${smtpUser}>`,
-      to: receiver,
-      replyTo: email || smtpUser,
-      subject: emailSubject,
-      text: `New ${formType} submission:\n\nName: ${name}\nPhone: ${contactPhone}\nDetails: ${details}\nMessage: ${userMessage}`,
-      html: htmlContent,
-    });
+    // 2. Sync to Airtable
+    let airtableTableName = 'Admission Enquiries';
+    let airtableFields = {};
 
-    return res.status(200).json({ success: true, message: 'Email sent successfully' });
+    if (formType === 'Teaching Career') {
+      airtableTableName = 'Career Applications';
+      airtableFields = {
+        'Applicant Name': name,
+        'Position Applied For': jobPosition || details || 'Teaching Faculty',
+        'Contact Phone': contactPhone,
+        'Email': email || '',
+        'Experience & Qualifications': userMessage,
+        'Status': 'Applied'
+      };
+    } else if (formType === 'General Contact') {
+      airtableTableName = 'General Enquiries';
+      airtableFields = {
+        'Full Name': name,
+        'Contact Phone': contactPhone,
+        'Email': email || '',
+        'Query Category': 'Other Enquiry',
+        'Message': userMessage,
+        'Status': 'Unread'
+      };
+    } else {
+      // Default: Admission Enquiry
+      airtableTableName = 'Admission Enquiries';
+      airtableFields = {
+        'Student Name': name,
+        'Guardian Name': guardianName || '',
+        'Applying Class': applyingClass || details || 'Class 1 (10AM to 4PM)',
+        'Contact Phone': contactPhone,
+        'Email': email || '',
+        'Message / Query': userMessage,
+        'Status': 'New Enquiry'
+      };
+    }
+
+    // Execute Email and Airtable concurrently
+    const [mailResult, airtableResult] = await Promise.allSettled([
+      transporter.sendMail({
+        from: `"STMT School Website" <${smtpUser}>`,
+        to: receiver,
+        replyTo: email || smtpUser,
+        subject: emailSubject,
+        text: `New ${formType} submission:\n\nName: ${name}\nPhone: ${contactPhone}\nDetails: ${details}\nMessage: ${userMessage}`,
+        html: htmlContent,
+      }),
+      saveToAirtable({
+        baseId: airtableBaseId,
+        token: airtableToken,
+        tableName: airtableTableName,
+        fields: airtableFields
+      })
+    ]);
+
+    return res.status(200).json({
+      success: true,
+      message: 'Form submitted and synchronized successfully',
+      emailDelivered: mailResult.status === 'fulfilled',
+      airtableSaved: airtableResult.status === 'fulfilled'
+    });
   } catch (error) {
-    console.error('Email sending error:', error);
+    console.error('Submission handling error:', error);
     return res.status(500).json({
       success: false,
-      error: error.message || 'Failed to dispatch notification email',
+      error: error.message || 'Failed to dispatch notification',
     });
   }
 };

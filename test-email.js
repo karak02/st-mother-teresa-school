@@ -1,4 +1,13 @@
 const nodemailer = require('nodemailer');
+const fs = require('fs');
+
+// Simple .env loader
+if (fs.existsSync('.env')) {
+  fs.readFileSync('.env', 'utf8').split('\n').forEach(line => {
+    const [k, ...v] = line.split('=');
+    if (k && v.length) process.env[k.trim()] = v.join('=').trim();
+  });
+}
 
 const config = {
   host: process.env.GODADDY_SMTP_HOST || 'smtpout.secureserver.net',
@@ -6,7 +15,7 @@ const config = {
   secure: true,
   auth: {
     user: process.env.GODADDY_EMAIL_USER || 'office@stmtinternationalschool.com',
-    pass: process.env.GODADDY_EMAIL_PASS || 'boroMAABABA123@',
+    pass: process.env.GODADDY_EMAIL_PASS,
   },
   receiver: process.env.NOTIFICATION_RECEIVER || 'office@stmtinternationalschool.com',
 };
