@@ -4,6 +4,8 @@
   "description": "St. Mother Teresa International School Website & Form Email Dispatcher",
   "main": "api/send-email.js",
   "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js",
     "test:email": "node test-email.js"
   },
   "dependencies": {

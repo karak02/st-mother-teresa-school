@@ -27,6 +27,22 @@
 </head>
 <body class="bg-[#FDFCF7] text-slate-800 antialiased selection:bg-gradient-to-r from-[#0A58CA] to-[#0D9488] selection:text-white">
 
+  <!-- PAGE PRELOADER -->
+  <div id="page-preloader">
+    <div class="relative flex items-center justify-center mb-6">
+      <div class="preloader-spinner absolute"></div>
+      <img src="images/school-logo.png" alt="St. Mother Teresa International School" class="w-16 h-16 object-contain relative z-10 preloader-logo" />
+    </div>
+    <div class="text-center space-y-2 px-4 max-w-sm">
+      <h2 class="text-white font-black text-sm tracking-wider uppercase font-heading">St. Mother Teresa</h2>
+      <p class="text-[11px] font-semibold tracking-widest text-[#0D9488] uppercase">International School</p>
+      <!-- Progress Bar Track -->
+      <div class="w-44 h-1 bg-white/10 rounded-full overflow-hidden mx-auto mt-4 relative">
+        <div class="w-full h-full bg-gradient-to-r from-[#0A58CA] via-[#0284C7] to-[#0D9488] rounded-full preloader-bar-fill"></div>
+      </div>
+    </div>
+  </div>
+
     <!-- ==================== 1. TOP INFORMATION BAR ==================== -->
   <div class="bg-[#0A1E42] text-white text-xs font-medium border-b border-white/10 relative z-30">
     <div class="site-container py-2 sm:py-0 sm:h-10 flex items-center justify-between gap-2 sm:gap-4">
@@ -161,32 +177,32 @@
       
       <!-- Slide 1: School Main Building Facade -->
       <div class="hero-slide active">
-        <img src="images/building-main.png" alt="St. Mother Teresa International School Building" class="w-full h-full object-cover object-center filter contrast-[1.08] brightness-[0.85]" />
+        <img src="images/building-main.png" alt="St. Mother Teresa International School Building" fetchpriority="high" decoding="async" class="w-full h-full object-cover object-center filter contrast-[1.08] brightness-[0.85]" />
       </div>
 
       <!-- Slide 2: Facility - Swimming Pool -->
       <div class="hero-slide">
-        <img src="images/facility-pool.png" alt="Swimming Pool Facility" class="w-full h-full object-cover object-center filter contrast-[1.08] brightness-[0.85]" />
+        <img src="images/facility-pool.png" alt="Swimming Pool Facility" loading="lazy" decoding="async" class="w-full h-full object-cover object-center filter contrast-[1.08] brightness-[0.85]" />
       </div>
 
       <!-- Slide 3: Facility - Safe Transport -->
       <div class="hero-slide">
-        <img src="images/facility-transport.png" alt="School Transport Fleet" class="w-full h-full object-cover object-center filter contrast-[1.08] brightness-[0.85]" />
+        <img src="images/facility-transport.png" alt="School Transport Fleet" loading="lazy" decoding="async" class="w-full h-full object-cover object-center filter contrast-[1.08] brightness-[0.85]" />
       </div>
 
       <!-- Slide 4: Student Learning & Aspirations -->
       <div class="hero-slide">
-        <img src="images/students-aspirations.png" alt="Students Aspirations" class="w-full h-full object-cover object-center filter contrast-[1.08] brightness-[0.85]" onerror="this.src='images/students-uniform.png';" />
+        <img src="images/students-aspirations.png" alt="Students Aspirations" loading="lazy" decoding="async" class="w-full h-full object-cover object-center filter contrast-[1.08] brightness-[0.85]" onerror="this.src='images/students-uniform.png';" />
       </div>
 
       <!-- Slide 5: Facility - Science Lab -->
       <div class="hero-slide">
-        <img src="images/facility-lab.png" alt="Science Laboratory" class="w-full h-full object-cover object-center filter contrast-[1.08] brightness-[0.85]" />
+        <img src="images/facility-lab.png" alt="Science Laboratory" loading="lazy" decoding="async" class="w-full h-full object-cover object-center filter contrast-[1.08] brightness-[0.85]" />
       </div>
 
       <!-- Slide 6: Smart Digital Classroom -->
       <div class="hero-slide">
-        <img src="images/smart_classroom.png" alt="Smart Classroom" class="w-full h-full object-cover object-center filter contrast-[1.08] brightness-[0.85]" />
+        <img src="images/smart_classroom.png" alt="Smart Classroom" loading="lazy" decoding="async" class="w-full h-full object-cover object-center filter contrast-[1.08] brightness-[0.85]" />
       </div>
 
       <!-- Gradient Overlays for High Contrast & Text Legibility -->
@@ -1066,7 +1082,6 @@
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             entry.target.classList.add('is-visible');
-            // Unobserve once revealed for buttery-smooth performance
             observer.unobserve(entry.target);
           }
         });
@@ -1079,6 +1094,20 @@
         revealObserver.observe(el);
       });
     });
+  </script>
+
+  <script>
+    // Universal Page Preloader Dismiss Handler
+    function dismissPreloader() {
+      const loader = document.getElementById('page-preloader');
+      if (loader && !loader.classList.contains('preloader-hidden')) {
+        loader.classList.add('preloader-hidden');
+        setTimeout(() => { if (loader.parentNode) loader.remove(); }, 500);
+      }
+    }
+    window.addEventListener('load', dismissPreloader);
+    // Instant fallback trigger so the user never experiences delay
+    setTimeout(dismissPreloader, 800);
   </script>
 
 </body>
