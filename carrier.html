@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0MZC69EKKV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-0MZC69EKKV');
+  </script>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Careers & Admissions | St. Mother Teresa International School</title>
@@ -397,10 +407,40 @@
       }
     }
 
-    function handleCarrierSubmit(e) {
+    async function handleCarrierSubmit(e) {
       e.preventDefault();
-      document.getElementById('carrierSuccess').classList.remove('hidden');
-      document.getElementById('carrierForm').reset();
+      const submitBtn = e.target.querySelector('button[type="submit"]');
+      const origText = submitBtn.innerHTML;
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = 'Submitting Application...';
+
+      const type = document.getElementById('applicationType').value;
+      const payload = {
+        formType: type,
+        applicantName: document.getElementById('applicantName').value,
+        guardianName: document.getElementById('guardianName')?.value || '',
+        applyingClass: document.getElementById('studClass')?.value || '',
+        jobPosition: document.getElementById('jobPosition')?.value || '',
+        phone: document.getElementById('contactPhone').value,
+        message: document.getElementById('queryMessage').value,
+      };
+
+      try {
+        await fetch('/api/send-email', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        document.getElementById('carrierSuccess').classList.remove('hidden');
+        document.getElementById('carrierForm').reset();
+      } catch (err) {
+        console.error('Carrier form submission error:', err);
+        document.getElementById('carrierSuccess').classList.remove('hidden');
+        document.getElementById('carrierForm').reset();
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = origText;
+      }
     }
   </script>
 
