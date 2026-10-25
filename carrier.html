@@ -230,12 +230,59 @@
     </div>
   </section>
 
+  <!-- SECTION: CAMPUS & ADMISSIONS VIDEO (FIRST AT THE TOP OF ADMISSIONS PAGE) -->
+  <section class="py-10 lg:py-14 bg-[#06132B] text-white border-b border-slate-800 reveal-on-scroll">
+    <div class="site-container space-y-6">
+      
+      <div class="text-center max-w-2xl mx-auto space-y-2">
+        <span class="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full text-[11px] font-black uppercase tracking-wider bg-[#F5A623] text-[#0A1E42]">
+          <i class="fa-solid fa-play"></i> Virtual Tour & Admissions Overview
+        </span>
+        <h2 class="text-2xl sm:text-4xl font-black text-white">Experience St. Mother Teresa International School</h2>
+        <p class="text-slate-300 text-xs sm:text-sm">Get an inside look at our campus atmosphere, student counseling, and school premises.</p>
+      </div>
+
+      <!-- High-Performance Video Player with Muted Autoplay & Sound Toggle -->
+      <div class="max-w-4xl mx-auto rounded-3xl overflow-hidden bg-black shadow-2xl border border-white/15 relative aspect-video group">
+        <video id="admissionTopVideo" 
+               class="w-full h-full object-cover" 
+               preload="metadata" 
+               poster="images/video_asst_2.jpeg" 
+               autoplay 
+               muted 
+               loop 
+               playsinline 
+               controls>
+          <source src="images/stMTIS.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+
+        <!-- Floating Sound Control Pill -->
+        <button id="soundToggleBtn" 
+                onclick="toggleAdmissionVideoSound()" 
+                class="absolute bottom-5 right-5 z-20 px-4 py-2 rounded-full bg-[#0A1E42]/85 hover:bg-[#0D9488] text-white text-xs font-bold backdrop-blur-md shadow-xl border border-white/20 transition flex items-center gap-2 group/btn cursor-pointer">
+          <i id="soundIcon" class="fa-solid fa-volume-xmark text-sm"></i>
+          <span id="soundText">Tap for Sound</span>
+        </button>
+      </div>
+
+      <div class="text-center pt-2">
+        <a href="#apply" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#0D9488] hover:bg-[#004EC4] text-white text-xs font-black uppercase tracking-wider transition shadow-lg">
+          <span>Proceed to Online Application Form Below</span>
+          <i class="fa-solid fa-arrow-down"></i>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
   <!-- SECTION 1: 4-STEP ADMISSION PROCESS -->
-  <section class="py-16 lg:py-20 bg-[#FAF7F2] border-b border-slate-200 reveal-on-scroll">
+  <section class="py-14 lg:py-18 bg-[#FAF7F2] border-b border-slate-200 reveal-on-scroll">
     <div class="site-container space-y-10">
       <div class="text-center max-w-2xl mx-auto space-y-2">
         <span class="text-xs font-extrabold tracking-widest text-[#0D9488] uppercase">ADMISSION PROCESS 2027–2028</span>
         <h2 class="text-xl sm:text-3xl font-black text-[#0A1E42]">How to Apply for Admission</h2>
+        <p class="text-xs text-slate-500">Need office assistance? <a href="academics.html#our-staff" class="font-bold text-[#0D9488] hover:underline">Meet our Staff on the Academics & Timings page →</a></p>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -458,6 +505,7 @@
         <h4 class="text-white font-bold text-sm mb-3">Careers & Admissions</h4>
         <ul class="space-y-2">
           <li><a href="carrier.html" class="hover:text-white transition">Admission Process</a></li>
+          <li><a href="academics.html#our-staff" class="hover:text-white transition">Our Staff (Administrative Team)</a></li>
           <li><a href="carrier.html#apply" class="hover:text-white transition">Online Application Form</a></li>
           <li><a href="carrier.html#apply" class="hover:text-white transition">Campus Location & Contact</a></li>
         </ul>
@@ -536,6 +584,23 @@
       } finally {
         submitBtn.disabled = false;
         submitBtn.innerHTML = origText;
+      }
+    }
+
+    function toggleAdmissionVideoSound() {
+      const video = document.getElementById('admissionTopVideo');
+      const soundIcon = document.getElementById('soundIcon');
+      const soundText = document.getElementById('soundText');
+      if (!video) return;
+
+      if (video.muted) {
+        video.muted = false;
+        if (soundIcon) soundIcon.className = 'fa-solid fa-volume-high text-sm text-[#F5A623]';
+        if (soundText) soundText.innerText = 'Sound On';
+      } else {
+        video.muted = true;
+        if (soundIcon) soundIcon.className = 'fa-solid fa-volume-xmark text-sm';
+        if (soundText) soundText.innerText = 'Tap for Sound';
       }
     }
   </script>
